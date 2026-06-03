@@ -1,0 +1,12 @@
+Segment,Users,Revenue,Priority,Strategy,Investment,Expected ROI
+Champions,114,"$14,303.50",CRITICAL,Retention,High,Very High
+At-Risk High Value,44,"$5,678.13",URGENT,Retention,High,Very High
+Loyal Customers,109,"$2,207.45",HIGH,Retention,Medium,High
+At-Risk Medium Value,71,"$1,467.65",HIGH,Retention,Medium,High
+Promising,61,"$1,293.31",MEDIUM,Growth,Medium,Medium-High
+Long-term Free Users,215,$0.00,MEDIUM,Growth,Low-Medium,Medium
+Engaged Low Spenders,168,$687.41,MEDIUM,Growth,Low-Medium,Medium
+New Explorers,26,$98.82,LOW,Growth,Low,Low-Medium
+Churned Free Users,92,$0.00,LOW,Low Priority,Very Low,Low
+Dormant Low Value,83,$359.58,LOW,Low Priority,Very Low,Low
+New Free Users,17,$0.00,LOW,Low Priority,Very Low,Low

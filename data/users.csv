@@ -1,0 +1,1001 @@
+user_id,signup_date,country,plan_tier,monthly_spend,is_active
+u_0000,2023-03-19,US,basic,-14.19,True
+u_0001,2024-10-09,US,free,9.08,False
+u_0002,2024-01-25,US,free,0.0,True
+u_0003,2022-04-19,US,basic,16.74,False
+u_0004,2024-07-05,US,basic,14.71,False
+u_0005,2024-05-26,UK,premium,63.19,False
+u_0006,2024-09-15,India,free,0.0,True
+u_0007,2022-09-20,United States,premium,66.93,False
+u_0008,2024-12-08,United Kingdom,free,,True
+u_0009,2022-12-18,United Kingdom,free,6.89,False
+u_0010,2024-05-28,UK,free,0.0,True
+u_0011,2023-09-27,US,free,4.08,True
+u_0012,2024-05-03,UK,free,0.0,True
+u_0013,2023-11-19,United States,free,3.83,True
+u_0014,2023-12-05,Australia,basic,8.9,True
+u_0015,2023-11-06,India,free,-35.7,False
+u_0016,2024-05-03,I$NDA,free,11.05,True
+u_0017,2024-03-20,United States,free,0.0,False
+u_0018,2022-05-28,Germany,free,0.0,True
+u_0019,2024-06-23,US,free,0.0,False
+u_0020,2023-08-10,United States,free,6.16,False
+u_0021,2022-12-20,US,free,2.77,True
+u_0022,2023-07-18,United States,basic,16.99,False
+u_0023,2024-11-24,US,premium,83.16,False
+u_0024,2024-07-28,US,free,2.42,False
+u_0025,2024-07-01,United States,basic,24.74,True
+u_0026,2023-05-22,United States,premium,81.55,True
+u_0027,2024-05-08,United States,enterprise,333.69,False
+u_0028,2023-02-26,US,basic,17.87,True
+u_0029,2024-01-22,United States,premium,81.29,False
+u_0030,2023-12-02,Germany,premium,59.47,True
+u_0031,2022-10-01,US,basic,10.19,False
+u_0032,2022-10-19,US,free,8.53,True
+u_0033,2022-03-08,Canada,free,1.08,True
+u_0034,2022-06-03,Australia,free,,False
+u_0035,2023-04-20,United States,free,,False
+u_0036,2023-06-08,I$NDA,free,0.0,False
+u_0037,2022-06-30,India,free,0.05,False
+u_0038,2023-04-02,United States,basic,26.49,True
+u_0039,2023-10-24,United Kingdom,basic,-24.18,True
+u_0040,2022-09-12,United States,premium,34.19,True
+u_0041,2023-01-06,United Kingdom,free,0.0,True
+u_0042,2023-02-07,Canada,free,8.91,True
+u_0043,2023-07-08,United Kingdom,basic,13.29,False
+u_0044,2023-02-06,US,premium,32.59,True
+u_0045,2024-03-17,US,enterprise,354.12,True
+u_0046,2022-12-25,US,premium,77.28,True
+u_0047,2023-04-21,United Kingdom,premium,63.74,True
+u_0048,2023-02-20,US,free,0.0,True
+u_0049,2022-07-20,US,free,5.41,True
+u_0050,2024-01-21,US,free,0.0,True
+u_0051,2022-09-15,US,basic,-34.63,True
+u_0052,2022-11-22,Australia,premium,74.76,False
+u_0053,2024-05-18,US,free,1.22,True
+u_0054,2024-11-04,United States,basic,16.16,True
+u_0055,2024-01-05,UK,free,0.0,True
+u_0056,2024-09-30,US,free,5.23,True
+u_0057,2024-07-24,US,free,0.0,True
+u_0058,2023-06-11,United States,free,0.0,False
+u_0059,2024-04-23,Australia,premium,76.06,True
+u_0060,2022-12-26,Australia,free,3.16,True
+u_0061,2023-05-20,United States,premium,73.64,True
+u_0062,2023-08-10,Australia,basic,18.26,False
+u_0063,2024-11-17,Australia,free,-13.14,True
+u_0064,2024-07-18,United States,free,3.94,True
+u_0065,2023-06-20,Canada,premium,64.18,False
+u_0066,2023-12-16,United States,free,0.0,True
+u_0067,2022-08-10,UK,premium,59.39,True
+u_0068,2024-05-30,US,free,10.1,True
+u_0069,2023-08-29,Germany,basic,1.12,True
+u_0070,2023-08-07,France,premium,,False
+u_0071,2024-04-19,United States,free,,True
+u_0072,2023-11-25,Canada,free,,True
+u_0073,2022-03-21,US,enterprise,226.15,True
+u_0074,2022-11-12,UK,free,0.0,True
+u_0075,2022-07-13,United States,free,1.95,False
+u_0076,2024-03-15,US,free,,True
+u_0077,2022-02-08,India,free,0.0,False
+u_0078,2022-08-10,United States,basic,21.72,True
+u_0079,2023-10-17,US,basic,26.48,True
+u_0080,2024-01-31,Canada,free,7.45,True
+u_0081,2023-07-06,US,premium,71.46,False
+u_0082,2024-07-31,US,free,,True
+u_0083,2024-10-03,CAN,free,6.64,True
+u_0084,2022-05-25,US,basic,28.46,False
+u_0085,2024-11-08,US,enterprise,312.35,True
+u_0086,2023-11-04,Brazil,free,0.0,True
+u_0087,2023-11-28,India,free,1.01,True
+u_0088,2022-04-15,CAN,basic,18.52,False
+u_0089,2023-11-12,UK,premium,32.43,True
+u_0090,2024-03-05,UK,free,2.35,True
+u_0091,2023-09-28,US,free,11.36,True
+u_0092,2022-04-03,United States,basic,,True
+u_0093,2023-07-27,Australia,free,7.37,True
+u_0094,2024-10-21,Australia,free,0.91,True
+u_0095,2024-03-03,I$NDA,free,0.0,True
+u_0096,2022-05-31,US,free,1.91,True
+u_0097,2024-11-17,UK,free,0.0,False
+u_0098,2024-11-15,US,premium,47.65,True
+u_0099,2022-07-05,United Kingdom,basic,25.13,True
+u_0100,2024-05-26,United Kingdom,basic,25.98,False
+u_0101,2023-10-13,United Kingdom,enterprise,195.49,False
+u_0102,2023-05-03,United States,free,4.84,True
+u_0103,2024-05-06,US,free,0.0,True
+u_0104,2024-12-27,US,premium,71.12,True
+u_0105,2024-05-20,France,free,2.3,True
+u_0106,2024-10-16,India,basic,22.95,True
+u_0107,2024-11-01,US,basic,15.66,True
+u_0108,2022-04-09,US,free,7.05,True
+u_0109,2022-10-05,US,free,1.55,True
+u_0110,2024-03-01,US,free,3.12,True
+u_0111,2023-10-09,India,free,0.0,True
+u_0112,2022-02-24,United States,free,10.79,True
+u_0113,2022-04-15,US,free,2.35,False
+u_0114,2023-07-24,UK,basic,20.7,False
+u_0115,2023-11-06,United States,premium,36.05,True
+u_0116,2022-07-03,US,premium,50.19,True
+u_0117,2022-07-07,United States,free,6.19,True
+u_0118,2022-05-22,UK,free,1.43,True
+u_0119,2023-09-11,Canada,free,0.0,False
+u_0120,2022-01-09,UK,free,5.19,True
+u_0121,2023-09-19,US,premium,55.21,True
+u_0122,2023-06-06,United Kingdom,free,7.06,True
+u_0123,5/26/2023,India,free,-22.81,True
+u_0124,2024-01-14,US,premium,68.68,True
+u_0125,unknown,United States,free,5.89,True
+u_0126,2024-04-16,United States,free,0.0,False
+u_0127,2024-10-04,United States,free,0.0,True
+u_0128,2024-05-25,Brazil,basic,13.43,True
+u_0129,2023-07-21,UK,basic,21.62,True
+u_0130,2023-06-23,Canada,free,0.0,True
+u_0131,2022-09-16,US,premium,34.98,True
+u_0132,2023-10-19,Australia,premium,,True
+u_0133,2022-06-02,United States,premium,54.15,False
+u_0134,2024-10-16,United States,free,0.0,True
+u_0135,2024-07-14,United States,free,0.0,True
+u_0136,2022-05-12,United Kingdom,premium,52.78,True
+u_0137,2024-05-10,US,free,0.0,True
+u_0138,2022-05-09,Australia,basic,22.44,True
+u_0139,2024-02-29,I$NDA,basic,8.83,False
+u_0140,2022-04-07,India,free,8.29,True
+u_0141,2023-06-19,UK,basic,9.52,True
+u_0142,2023-12-22,Canada,premium,52.7,True
+u_0143,3/9/2024,US,basic,27.3,True
+u_0144,2023-04-04,US,free,1.06,True
+u_0145,2024-10-06,I$NDA,premium,55.06,True
+u_0146,4/27/2024,Germany,basic,-71.75,True
+u_0147,2022-08-17,United States,basic,25.82,True
+u_0148,2024-01-05,United Kingdom,premium,91.39,False
+u_0149,2024-03-10,United Kingdom,basic,8.47,False
+u_0150,2023-01-01,US,free,,False
+u_0151,2024-03-19,India,free,0.45,False
+u_0152,2024-09-10,UK,free,0.0,False
+u_0153,2024-06-13,United States,basic,14.55,False
+u_0154,2024-04-14,Australia,basic,15.04,False
+u_0155,2023-11-26,I$NDA,basic,,False
+u_0156,2022-10-24,United Kingdom,free,6.04,False
+u_0157,2024-05-20,US,basic,12.37,False
+u_0158,2023-02-03,US,premium,61.15,True
+u_0159,2023-08-06,US,free,3.32,True
+u_0160,2022-12-11,US,basic,10.32,True
+u_0161,2022-12-09,United Kingdom,basic,19.71,False
+u_0162,"June 22, 2022",India,basic,14.3,True
+u_0163,2024-11-18,United States,free,0.0,False
+u_0164,2022-06-11,United States,basic,7.35,False
+u_0165,2022-04-05,United States,enterprise,329.59,False
+u_0166,2024-10-22,United States,basic,13.75,True
+u_0167,2023-08-31,US,premium,94.53,False
+u_0168,2023-04-25,United Kingdom,enterprise,221.75,False
+u_0169,2024-03-18,United States,free,-16.98,False
+u_0170,2023-02-24,United Kingdom,basic,34.14,False
+u_0171,2022-05-21,United States,free,0.0,True
+u_0172,2024-03-10,Australia,enterprise,145.62,True
+u_0173,2022-07-12,US,free,-75.57,True
+u_0174,2023-08-29,Australia,free,0.0,False
+u_0175,2024-11-05,United States,premium,64.63,True
+u_0176,2024-10-22,US,free,0.0,False
+u_0177,2023-01-31,UK,basic,17.15,False
+u_0178,2024-05-04,United States,free,0.0,True
+u_0179,2023-11-02,UK,enterprise,240.1,True
+u_0180,2023-06-09,UK,premium,73.1,True
+u_0181,2022-06-03,US,free,0.0,False
+u_0182,2023-02-17,UK,basic,,True
+u_0183,2023-12-15,Canada,free,,True
+u_0184,2024-12-16,United Kingdom,basic,3.57,False
+u_0185,2022-01-06,US,basic,11.62,True
+u_0186,2024-02-25,Canada,premium,67.14,False
+u_0187,2024-07-15,US,free,0.0,True
+u_0188,2024-11-07,United States,free,0.0,True
+u_0189,2023-04-10,United States,basic,14.84,True
+u_0190,2022-05-10,US,basic,9.75,True
+u_0191,2022-10-24,US,free,3.46,True
+u_0192,2024-07-20,US,free,7.18,False
+u_0193,2024-08-19,UK,free,0.0,True
+u_0194,2023-11-29,Australia,premium,73.73,True
+u_0195,2022-05-15,UK,free,0.0,True
+u_0196,2022-05-14,CAN,free,1.83,True
+u_0197,2023-06-08,US,premium,93.18,False
+u_0198,2023-10-07,UK,free,2.54,True
+u_0199,2022-02-05,United Kingdom,basic,,False
+u_0200,2024-01-22,United States,free,-88.74,True
+u_0201,2023-08-20,Australia,premium,87.19,True
+u_0202,2022-01-14,US,basic,,True
+u_0203,2022-04-15,US,premium,82.92,True
+u_0204,2023-05-13,Australia,free,0.0,False
+u_0205,2024-03-02,I$NDA,basic,3.12,True
+u_0206,2024-06-22,United States,basic,16.13,True
+u_0207,2023-04-18,US,free,0.0,True
+u_0208,2022-11-20,US,free,0.0,True
+u_0209,2024-11-26,UK,free,6.43,False
+u_0210,2023-05-18,United Kingdom,enterprise,144.96,False
+u_0211,2022-12-12,US,basic,,True
+u_0212,2023-04-30,United States,basic,6.74,False
+u_0213,2022-01-14,US,basic,14.49,False
+u_0214,2022-11-27,UK,basic,12.07,True
+u_0215,2023-07-19,UK,free,7.0,False
+u_0216,2024-10-02,US,free,4.77,True
+u_0217,2024-03-19,US,basic,18.96,False
+u_0218,2024-05-05,Australia,free,0.73,False
+u_0219,2023-08-20,United States,premium,72.08,True
+u_0220,2022-05-02,India,premium,-50.78,False
+u_0221,2023-03-05,India,free,4.29,False
+u_0222,2024-12-27,UK,basic,6.1,True
+u_0223,2022-02-18,United States,free,4.18,True
+u_0224,2024-08-20,Australia,enterprise,315.24,False
+u_0225,2024-01-20,United States,premium,68.8,False
+u_0226,2022-11-07,United States,premium,,True
+u_0227,2024-05-01,United States,free,2.0,True
+u_0228,2024-07-05,US,free,0.0,True
+u_0229,2022-02-17,Australia,free,1.51,True
+u_0230,2022-04-27,Canada,free,0.0,True
+u_0231,2023-12-30,United States,free,0.0,True
+u_0232,2024-12-30,Canada,free,3.53,True
+u_0233,2022-01-27,United States,enterprise,,True
+u_0234,2023-12-30,UK,free,0.0,True
+u_0235,"May 30, 2022",United States,free,0.0,True
+u_0236,2023-12-13,US,premium,66.22,False
+u_0237,2023-11-14,US,basic,15.92,True
+u_0238,2022-04-10,United States,basic,16.3,True
+u_0239,2024-01-16,US,basic,23.31,True
+u_0240,2024-09-09,United States,premium,45.45,True
+u_0241,2024-08-03,United States,basic,16.41,True
+u_0242,2022-02-01,US,basic,25.32,True
+u_0243,2022-09-27,Australia,basic,1.12,True
+u_0244,2022-09-21,Canada,free,0.9,True
+u_0245,2023-05-12,US,free,0.0,True
+u_0246,2022-06-06,Germany,free,0.0,True
+u_0247,2024-07-24,US,free,0.0,False
+u_0248,2024-04-30,US,basic,13.64,False
+u_0249,2024-06-04,United States,free,9.21,True
+u_0250,2022-08-06,United States,free,0.0,True
+u_0251,2022-01-16,United States,free,0.0,True
+u_0252,2024-09-24,UK,premium,41.57,True
+u_0253,2022-11-13,UK,free,8.64,True
+u_0254,2023-12-20,France,basic,11.3,True
+u_0255,2024-09-22,Canada,premium,64.54,True
+u_0256,2022-02-09,Australia,free,,True
+u_0257,2022-01-06,US,basic,7.44,True
+u_0258,2022-01-06,UK,free,0.0,False
+u_0259,2022-06-21,Germany,free,12.29,False
+u_0260,2022-02-26,US,basic,26.14,True
+u_0261,2024-06-16,United States,premium,49.65,True
+u_0262,2023-10-26,Brazil,free,3.24,True
+u_0263,2024-12-09,Australia,basic,8.35,False
+u_0264,2024-05-27,UK,free,0.0,True
+u_0265,2024-11-20,United Kingdom,basic,23.16,True
+u_0266,2022-09-19,Canada,basic,-69.41,True
+u_0267,2022-11-12,I$NDA,basic,23.37,False
+u_0268,2024-07-19,India,basic,11.24,True
+u_0269,2022-09-26,Canada,free,0.0,True
+u_0270,2022-03-04,US,basic,21.0,True
+u_0271,2024-05-27,Australia,basic,18.13,True
+u_0272,2024-11-26,Australia,basic,11.85,True
+u_0273,2024-10-12,United States,free,-35.31,True
+u_0274,2022-05-12,US,free,0.57,True
+u_0275,2024-04-25,United States,free,5.4,True
+u_0276,2024-07-15,United States,free,0.0,True
+u_0277,2024-02-04,United Kingdom,free,3.19,False
+u_0278,2024-06-16,United States,free,1.66,True
+u_0279,2024-07-06,United States,basic,21.0,True
+u_0280,2023-05-04,US,free,4.36,True
+u_0281,2022-02-13,United States,premium,52.5,True
+u_0282,2023-05-15,US,basic,2.06,True
+u_0283,2022-08-09,US,basic,10.73,False
+u_0284,2022-05-05,United States,free,4.45,True
+u_0285,2022-05-17,United Kingdom,free,0.0,False
+u_0286,2024-02-03,US,basic,9.45,False
+u_0287,2023-07-07,US,premium,32.22,True
+u_0288,2023-08-15,United States,free,,True
+u_0289,2024-03-26,UK,basic,21.61,True
+u_0290,2023-08-24,I$NDA,basic,21.16,True
+u_0291,2023-11-21,Australia,basic,22.74,True
+u_0292,2022-04-05,France,free,2.88,True
+u_0293,2024-07-20,Australia,basic,13.05,True
+u_0294,2023-05-07,Canada,free,0.0,True
+u_0295,2022-06-19,US,premium,,False
+u_0296,2024-06-09,Australia,free,13.17,True
+u_0297,15/03/2024,UK,free,2.78,False
+u_0298,2022-02-28,US,enterprise,224.49,True
+u_0299,2022-07-31,US,free,2.33,True
+u_0300,2022-01-18,US,free,0.0,True
+u_0301,2022-10-24,Canada,free,7.52,True
+u_0302,2022-04-20,India,free,0.0,True
+u_0303,2024-02-17,United States,free,2.51,False
+u_0304,2023-07-27,UK,free,5.33,True
+u_0305,2024-12-09,United States,basic,18.08,True
+u_0306,2024-03-31,Australia,basic,15.76,True
+u_0307,2023-11-01,United States,free,0.05,True
+u_0308,2023-07-12,United States,basic,14.55,True
+u_0309,2022-03-01,US,free,0.0,True
+u_0310,2022-03-18,Germany,premium,56.91,True
+u_0311,2023-11-06,United States,free,7.4,True
+u_0312,2022-01-05,United States,basic,14.13,True
+u_0313,"February 16, 2022",I$NDA,free,0.0,False
+u_0314,2022-08-28,US,basic,10.87,True
+u_0315,2024-08-26,US,free,5.5,True
+u_0316,2023-05-18,US,basic,20.4,False
+u_0317,2024-02-16,India,free,-99.72,True
+u_0318,2023-03-27,United States,premium,60.36,True
+u_0319,2022-07-09,UK,basic,19.59,False
+u_0320,2023-02-11,Australia,basic,9.85,False
+u_0321,2022-04-11,Canada,premium,60.33,False
+u_0322,2024-04-23,US,enterprise,303.34,True
+u_0323,2022-07-20,United States,free,4.37,False
+u_0324,2023-02-17,United States,free,0.0,True
+u_0325,2024-12-09,United States,free,0.0,False
+u_0326,2023-10-11,Canada,free,0.54,False
+u_0327,2023-05-18,CAN,basic,28.81,False
+u_0328,2023-08-18,US,enterprise,144.64,True
+u_0329,2024-05-08,Canada,enterprise,265.31,True
+u_0330,2022-10-06,US,basic,3.99,True
+u_0331,2023-11-28,Canada,basic,9.93,True
+u_0332,2024-08-13,US,premium,58.44,True
+u_0333,2023-09-19,Canada,premium,-20.02,False
+u_0334,2023-05-04,India,free,0.0,True
+u_0335,2022-06-08,United Kingdom,basic,15.06,True
+u_0336,2022-09-29,US,premium,55.37,True
+u_0337,2024-11-01,United Kingdom,free,0.0,True
+u_0338,2023-08-16,I$NDA,free,3.9,True
+u_0339,2022-11-26,United States,enterprise,291.41,True
+u_0340,2023-04-04,US,enterprise,296.37,False
+u_0341,2023-09-25,United States,premium,37.27,False
+u_0342,2023-08-12,United States,basic,17.39,True
+u_0343,2024-02-06,Canada,free,3.38,True
+u_0344,2022-10-09,United States,free,0.0,True
+u_0345,2023-12-12,United Kingdom,basic,15.07,False
+u_0346,2023-04-30,Canada,basic,-87.09,False
+u_0347,2024-10-26,Canada,basic,29.74,True
+u_0348,2022-06-22,India,basic,,False
+u_0349,2022-06-12,United States,free,0.0,True
+u_0350,2023-05-21,US,basic,34.95,True
+u_0351,2023-07-11,France,free,0.0,False
+u_0352,2024-01-27,UK,free,-46.77,True
+u_0353,2023-03-19,I$NDA,free,4.85,True
+u_0354,2024-09-27,US,free,0.0,True
+u_0355,2023-06-04,India,premium,73.88,True
+u_0356,2022-05-22,Australia,free,0.0,True
+u_0357,2022-05-11,United States,free,2.77,True
+u_0358,2024-12-01,US,basic,16.85,True
+u_0359,2022-05-27,India,basic,24.57,True
+u_0360,2024-11-03,UK,free,0.38,False
+u_0361,2022-11-01,Australia,free,0.0,True
+u_0362,2022-04-13,United States,free,5.48,False
+u_0363,2022-11-30,United States,basic,19.64,True
+u_0364,2023-11-05,US,free,3.66,True
+u_0365,2023-04-14,Canada,free,0.0,True
+u_0366,2024-05-10,United States,free,0.0,False
+u_0367,2023-11-01,United States,basic,10.46,True
+u_0368,2023-03-15,United States,free,0.0,False
+u_0369,2023-11-26,US,premium,79.15,True
+u_0370,2024-11-29,US,free,4.88,True
+u_0371,2023-03-27,United States,basic,13.76,True
+u_0372,2022-06-18,United States,free,7.15,True
+u_0373,2023-03-24,US,free,6.84,True
+u_0374,2024-07-08,I$NDA,free,1.22,True
+u_0375,2022-08-27,UK,premium,50.21,True
+u_0376,2024-11-05,US,premium,93.36,True
+u_0377,2023-10-07,UK,free,0.0,True
+u_0378,2023-10-21,US,free,0.63,True
+u_0379,2022-12-14,UK,premium,58.89,True
+u_0380,2024-10-04,United Kingdom,basic,7.88,True
+u_0381,2022-02-09,UK,free,0.0,True
+u_0382,2022-11-24,India,free,3.16,True
+u_0383,2023-04-04,US,basic,8.73,True
+u_0384,2023-06-07,United States,basic,39.48,False
+u_0385,2023-06-04,US,basic,6.31,True
+u_0386,2022-06-11,United States,enterprise,180.84,True
+u_0387,2022-09-05,United States,free,2.55,False
+u_0388,2022-04-15,United Kingdom,free,7.65,True
+u_0389,2023-09-19,India,free,0.32,True
+u_0390,2023-01-20,Canada,free,2.86,False
+u_0391,2023-09-12,US,free,0.0,False
+u_0392,2023-10-08,US,free,0.0,False
+u_0393,2024-02-08,US,free,0.0,True
+u_0394,2023-08-23,United States,basic,0.0,True
+u_0395,2023-12-11,United States,free,0.58,False
+u_0396,2023-10-05,US,free,0.0,False
+u_0397,2023-12-16,Canada,basic,4.42,True
+u_0398,2023-11-07,Australia,basic,10.7,True
+u_0399,2022-12-13,US,basic,8.35,True
+u_0400,2022-09-27,UK,premium,72.14,True
+u_0401,2024-05-12,United States,basic,17.44,True
+u_0402,2023-01-11,United States,free,,True
+u_0403,2023-08-25,UK,free,3.76,True
+u_0404,2022-08-04,US,basic,24.13,True
+u_0405,2023-04-18,United States,free,0.0,True
+u_0406,2023-08-03,Australia,free,1.52,True
+u_0407,2023-11-17,US,free,2.56,True
+u_0408,2023-07-31,US,free,0.71,True
+u_0409,2023-01-30,United Kingdom,free,0.0,False
+u_0410,2024-11-19,United States,free,0.0,True
+u_0411,2023-07-16,United States,premium,50.28,True
+u_0412,2024-03-17,India,premium,72.59,True
+u_0413,2023-09-04,United States,free,0.0,True
+u_0414,2024-08-28,US,premium,53.06,True
+u_0415,2022-05-21,Australia,free,0.0,True
+u_0416,2024-10-05,United States,premium,43.21,True
+u_0417,2024-07-19,United States,enterprise,303.84,True
+u_0418,2023-07-06,United Kingdom,free,,True
+u_0419,2024-03-14,Canada,basic,8.1,True
+u_0420,2023-07-24,United States,enterprise,294.47,True
+u_0421,2022-10-22,United States,premium,54.91,True
+u_0422,2024-05-25,UK,enterprise,172.64,True
+u_0423,2022-09-27,United States,basic,23.17,True
+u_0424,2022-12-11,United States,free,0.0,True
+u_0425,2023-07-23,US,premium,57.64,True
+u_0426,2024-07-05,US,basic,15.33,True
+u_0427,2023-02-25,India,basic,-62.13,False
+u_0428,2023-06-26,United States,free,0.1,False
+u_0429,2022-02-15,United States,basic,-40.63,False
+u_0430,2022-05-07,India,free,2.72,True
+u_0431,2022-03-03,France,basic,11.12,True
+u_0432,2022-03-20,Germany,free,9.44,True
+u_0433,2024-08-09,Australia,basic,14.99,True
+u_0434,2024-07-10,Australia,premium,24.77,True
+u_0435,2024-06-18,United Kingdom,free,1.79,True
+u_0436,2022-03-02,US,basic,30.56,True
+u_0437,2022-03-27,I$NDA,free,7.88,True
+u_0438,2022-11-04,United States,enterprise,350.7,True
+u_0439,2023-09-11,United Kingdom,basic,6.84,False
+u_0440,2023-01-01,Australia,free,4.56,True
+u_0441,2023-06-18,Australia,free,0.0,False
+u_0442,2022-07-09,US,free,1.12,True
+u_0443,2024-03-11,US,free,0.0,True
+u_0444,2022-12-10,US,premium,53.4,True
+u_0445,2022-03-14,Australia,basic,9.59,True
+u_0446,2024-03-24,US,free,4.49,True
+u_0447,2024-09-15,UK,premium,79.41,True
+u_0448,2022-01-17,Brazil,free,1.38,True
+u_0449,2023-04-24,US,premium,40.69,True
+u_0450,2024-06-24,United States,free,0.0,True
+u_0451,2024-02-13,United Kingdom,basic,9.03,False
+u_0452,2024-07-26,United States,premium,80.65,True
+u_0453,2023-03-31,Australia,free,5.89,True
+u_0454,2023-02-12,United States,basic,23.45,True
+u_0455,2024-02-16,United States,enterprise,208.46,True
+u_0456,2022-06-18,United Kingdom,free,0.0,True
+u_0457,2022-09-20,United States,free,0.0,True
+u_0458,2023-10-20,United States,basic,26.37,False
+u_0459,2024-01-02,United States,free,0.0,True
+u_0460,2022-05-12,US,free,0.0,True
+u_0461,2023-07-11,United States,free,8.21,True
+u_0462,2023-02-04,Canada,basic,25.12,False
+u_0463,2023-07-04,US,free,-88.72,False
+u_0464,2024-11-15,United States,free,0.0,False
+u_0465,2022-03-25,United States,premium,62.62,True
+u_0466,2024-12-26,CAN,basic,16.82,True
+u_0467,2023-05-08,Germany,premium,93.8,True
+u_0468,2024-04-25,US,free,2.11,False
+u_0469,2023-04-10,US,enterprise,289.93,True
+u_0470,2022-12-07,US,basic,24.35,True
+u_0471,2024-04-23,US,free,0.0,True
+u_0472,2024-01-23,US,premium,78.59,True
+u_0473,2022-06-07,US,free,,True
+u_0474,2024-02-12,US,free,0.0,True
+u_0475,2024-04-04,United States,free,0.0,True
+u_0476,2023-03-01,United States,basic,,False
+u_0477,2024-10-10,US,free,2.66,True
+u_0478,2023-12-03,Canada,free,0.57,False
+u_0479,2023-01-01,India,free,0.92,True
+u_0480,2022-01-12,US,free,9.75,False
+u_0481,2024-01-10,United States,free,0.0,True
+u_0482,2022-08-17,Australia,basic,14.78,False
+u_0483,2024-04-08,Australia,free,1.52,True
+u_0484,2023-07-29,United States,free,0.0,True
+u_0485,2023-05-27,United States,basic,15.23,True
+u_0486,2022-06-29,United States,free,0.0,True
+u_0487,2024-02-19,US,basic,26.28,True
+u_0488,2022-07-01,Australia,free,0.0,False
+u_0489,2023-04-03,Australia,free,10.16,False
+u_0490,2024-07-04,United States,free,0.0,True
+u_0491,2024-10-04,Germany,free,5.14,True
+u_0492,2024-12-19,United Kingdom,free,0.0,True
+u_0493,2024-11-15,United States,premium,,False
+u_0494,2023-09-01,United States,free,0.0,False
+u_0495,2022-08-08,United Kingdom,basic,15.95,True
+u_0496,2024-07-07,Australia,basic,17.54,False
+u_0497,2024-05-27,United States,free,,True
+u_0498,2023-12-14,United States,basic,14.0,False
+u_0499,2022-06-05,Canada,free,0.0,False
+u_0500,2023-07-05,Australia,free,11.5,False
+u_0501,2023-05-06,I$NDA,free,0.0,True
+u_0502,2024-07-12,United States,basic,27.36,True
+u_0503,2023-03-06,United States,premium,61.48,True
+u_0504,2022-12-26,United Kingdom,free,1.3,False
+u_0505,2022-03-29,United States,basic,4.43,True
+u_0506,2024-07-03,United Kingdom,basic,11.42,True
+u_0507,2024-04-07,UK,free,1.05,False
+u_0508,2022-02-15,United States,basic,27.69,True
+u_0509,2023-04-20,UK,basic,16.78,True
+u_0510,2023-06-10,US,premium,89.91,True
+u_0511,2023-05-29,US,enterprise,285.24,True
+u_0512,2024-10-03,United States,free,,True
+u_0513,2022-06-14,Canada,free,-82.98,True
+u_0514,2022-12-02,Australia,basic,34.12,True
+u_0515,2022-07-18,United States,free,0.0,True
+u_0516,2022-09-25,I$NDA,free,0.0,True
+u_0517,2024-09-20,US,enterprise,183.45,True
+u_0518,2024-10-27,India,free,11.66,True
+u_0519,2022-02-18,US,free,4.1,True
+u_0520,2023-11-24,US,premium,58.99,True
+u_0521,2022-09-12,US,free,6.25,False
+u_0522,2022-07-30,US,free,3.44,True
+u_0523,2022-11-16,Australia,enterprise,358.14,True
+u_0524,2022-08-01,United Kingdom,free,,False
+u_0525,2023-06-21,India,free,0.0,True
+u_0526,2024-12-26,US,free,0.0,True
+u_0527,2023-10-05,India,premium,29.47,True
+u_0528,2024-03-02,US,free,5.3,True
+u_0529,2023-06-25,United States,basic,,True
+u_0530,2022-01-16,France,free,3.7,False
+u_0531,2022-04-03,US,free,,False
+u_0532,2022-10-22,Australia,premium,58.64,True
+u_0533,2022-09-24,UK,basic,11.63,True
+u_0534,2024-07-09,CAN,enterprise,256.53,True
+u_0535,2024-07-12,Canada,free,4.94,True
+u_0536,2024-07-24,US,basic,-21.91,True
+u_0537,2023-11-30,United States,premium,53.64,True
+u_0538,2023-09-02,Brazil,free,5.29,False
+u_0539,2023-12-12,US,free,1.89,True
+u_0540,2023-03-22,Canada,premium,28.19,True
+u_0541,2024-01-04,UK,free,0.0,True
+u_0542,2024-05-19,US,basic,27.01,True
+u_0543,2024-04-15,US,enterprise,272.11,False
+u_0544,2023-11-04,United States,free,0.0,True
+u_0545,2022-03-05,United States,free,0.0,False
+u_0546,2024-03-04,US,free,,False
+u_0547,2023-02-06,India,free,3.68,False
+u_0548,2024-03-25,US,free,0.0,True
+u_0549,2023-08-14,US,basic,8.27,True
+u_0550,2024-08-22,United States,free,1.36,False
+u_0551,2023-01-06,Australia,basic,14.2,False
+u_0552,2024-10-16,United Kingdom,free,2.86,True
+u_0553,2024-07-13,Canada,free,0.0,False
+u_0554,2022-12-29,I$NDA,free,1.79,True
+u_0555,2023-06-13,United Kingdom,basic,23.73,True
+u_0556,2023-08-05,United States,free,2.43,False
+u_0557,2024-04-21,I$NDA,free,0.7,True
+u_0558,2024-01-25,United States,premium,63.27,True
+u_0559,2023-02-10,India,basic,8.32,False
+u_0560,2023-07-07,US,free,0.0,False
+u_0561,2023-04-17,United States,premium,87.67,False
+u_0562,2024-09-22,United States,free,0.0,True
+u_0563,2022-11-30,US,free,0.0,False
+u_0564,2023-10-05,US,free,0.0,True
+u_0565,2022-05-12,US,free,1.0,True
+u_0566,2024-07-20,Australia,free,0.0,True
+u_0567,2023-02-25,Australia,basic,18.88,False
+u_0568,2023-01-08,United Kingdom,free,2.61,False
+u_0569,2023-10-01,United States,premium,81.0,False
+u_0570,2023-07-01,UK,premium,90.62,True
+u_0571,2024-07-17,US,basic,,True
+u_0572,2023-08-05,Canada,basic,7.53,True
+u_0573,2023-07-21,US,basic,7.77,True
+u_0574,2022-04-25,United States,enterprise,245.83,True
+u_0575,2022-01-25,United States,free,0.0,True
+u_0576,2023-03-13,United States,free,0.0,False
+u_0577,2024-12-29,US,basic,11.47,False
+u_0578,2024-10-01,US,basic,11.2,False
+u_0579,2023-11-20,United States,free,0.0,True
+u_0580,2023-11-22,US,basic,12.47,True
+u_0581,2023-03-05,United States,free,5.89,True
+u_0582,2022-07-14,I$NDA,premium,68.59,True
+u_0583,2022-01-10,United States,free,12.36,True
+u_0584,2023-01-07,Germany,free,0.85,True
+u_0585,2022-12-13,Brazil,free,0.0,True
+u_0586,2022-07-29,United States,free,0.02,True
+u_0587,2022-10-11,US,free,1.28,True
+u_0588,2022-01-28,US,free,2.18,True
+u_0589,2023-10-28,Australia,free,10.38,True
+u_0590,10/12/2024,United States,free,0.0,True
+u_0591,2024-01-27,Australia,free,4.3,True
+u_0592,2023-05-06,United Kingdom,free,1.04,True
+u_0593,2023-04-06,US,free,0.0,True
+u_0594,2022-12-03,US,free,3.85,True
+u_0595,2022-06-05,US,free,6.34,False
+u_0596,2023-10-18,United Kingdom,free,0.0,True
+u_0597,2023-09-13,United States,free,0.0,True
+u_0598,2022-01-09,United States,basic,1.2,True
+u_0599,2023-03-31,US,enterprise,,True
+u_0600,2022-11-01,United States,premium,-41.31,True
+u_0601,2022-07-06,US,basic,11.27,False
+u_0602,2024-02-09,US,basic,6.13,True
+u_0603,2023-07-30,United States,free,1.15,True
+u_0604,2023-11-25,US,basic,10.82,True
+u_0605,2024-02-21,United States,basic,11.23,True
+u_0606,2024-12-11,Canada,premium,78.31,True
+u_0607,2023-11-11,Australia,premium,44.09,True
+u_0608,2024-08-20,UK,free,0.0,True
+u_0609,2023-06-07,US,basic,16.23,False
+u_0610,2024-12-14,US,premium,82.45,False
+u_0611,2024-04-13,US,free,6.19,False
+u_0612,2023-12-14,United Kingdom,premium,53.03,True
+u_0613,2024-09-16,United States,free,4.69,False
+u_0614,2023-07-19,Canada,enterprise,206.87,True
+u_0615,2024-02-29,United States,basic,29.61,True
+u_0616,2022-11-08,US,free,0.0,False
+u_0617,2024-11-20,Australia,basic,25.63,True
+u_0618,2023-11-14,United Kingdom,free,0.0,False
+u_0619,2024-05-06,US,basic,31.11,False
+u_0620,2023-05-20,Australia,basic,19.73,True
+u_0621,2024-08-07,United States,basic,,True
+u_0622,2022-03-23,United States,premium,55.6,True
+u_0623,2022-05-05,Germany,free,3.91,False
+u_0624,2023-07-10,United States,free,5.26,False
+u_0625,2024-03-12,United Kingdom,free,0.0,True
+u_0626,2024-06-05,Germany,free,0.22,True
+u_0627,2023-04-27,France,free,-94.97,True
+u_0628,2023-12-13,United States,free,0.66,True
+u_0629,2023-08-29,United Kingdom,free,0.0,True
+u_0630,2024-11-18,US,free,0.0,False
+u_0631,2023-12-18,United States,premium,69.23,True
+u_0632,2023-04-02,US,free,6.08,False
+u_0633,2024-11-27,Canada,premium,94.09,True
+u_0634,2022-04-28,United States,free,3.9,True
+u_0635,2024-12-14,United States,free,,True
+u_0636,2022-06-18,US,basic,20.99,False
+u_0637,2022-11-12,United States,free,0.0,True
+u_0638,2024-06-18,UK,free,0.0,True
+u_0639,2024-03-14,United States,basic,8.41,True
+u_0640,2024-11-28,Germany,free,0.0,False
+u_0641,2024-04-01,United States,free,1.67,True
+u_0642,2023-11-29,United States,basic,16.48,True
+u_0643,2023-01-15,United States,free,3.44,False
+u_0644,2022-01-06,United States,premium,,False
+u_0645,2022-05-16,France,free,1.21,True
+u_0646,2022-11-23,United States,enterprise,280.61,True
+u_0647,"February 14, 2022",US,basic,14.66,True
+u_0648,2023-07-11,US,enterprise,272.71,True
+u_0649,2024-05-01,United States,premium,51.93,True
+u_0650,2024-11-20,US,free,1.85,True
+u_0651,2023-06-21,UK,basic,20.35,True
+u_0652,2024-08-16,India,free,0.0,True
+u_0653,2024-12-15,United Kingdom,premium,65.93,True
+u_0654,2024-07-30,United States,basic,10.01,True
+u_0655,2023-05-25,US,free,0.0,True
+u_0656,2022-12-23,United States,premium,44.75,True
+u_0657,2024-12-06,United Kingdom,free,,False
+u_0658,2022-09-22,Canada,basic,,True
+u_0659,2023-03-27,US,basic,,True
+u_0660,2022-03-23,United States,free,9.86,True
+u_0661,2024-05-19,United States,basic,13.49,True
+u_0662,2023-12-13,US,premium,119.57,True
+u_0663,2022-04-03,United States,free,0.0,True
+u_0664,2022-09-01,India,basic,17.04,False
+u_0665,2023-09-01,US,free,0.0,True
+u_0666,2023-08-15,US,basic,17.98,True
+u_0667,2024-05-28,Germany,free,4.18,True
+u_0668,2022-10-19,Canada,premium,62.95,True
+u_0669,09/10/2024,I$NDA,premium,96.98,False
+u_0670,2023-05-02,United States,free,1.2,True
+u_0671,2024-06-19,United States,free,1.35,False
+u_0672,2022-09-19,United States,basic,,False
+u_0673,2022-02-10,US,basic,18.35,True
+u_0674,2022-03-02,United States,free,-37.58,True
+u_0675,2023-02-13,UK,free,0.0,True
+u_0676,2024-11-09,United States,free,0.0,False
+u_0677,2022-02-23,United States,enterprise,396.95,True
+u_0678,2023-02-09,Australia,free,0.0,True
+u_0679,2022-04-30,UK,premium,38.77,False
+u_0680,2024-10-17,United Kingdom,free,0.0,False
+u_0681,2024-01-10,Canada,premium,64.07,True
+u_0682,2024-04-15,UK,free,-17.48,True
+u_0683,2024-02-21,Brazil,free,2.77,False
+u_0684,2023-12-21,Canada,premium,77.18,True
+u_0685,2024-04-27,US,premium,53.39,False
+u_0686,2022-01-09,US,free,1.7,True
+u_0687,2024-08-05,United States,free,0.0,True
+u_0688,21/03/2024,US,free,0.0,False
+u_0689,2024-03-20,United States,free,0.0,True
+u_0690,2023-03-07,France,free,0.0,True
+u_0691,2024-05-26,United States,premium,84.16,True
+u_0692,2023-02-23,United States,free,3.44,True
+u_0693,unknown,UK,basic,22.81,False
+u_0694,2024-09-21,Australia,free,0.2,True
+u_0695,2022-09-14,United States,free,3.88,True
+u_0696,2022-04-22,United States,basic,0.91,True
+u_0697,2023-11-12,United States,free,4.32,False
+u_0698,13/09/2022,Canada,basic,16.42,True
+u_0699,2024-07-28,United States,free,3.14,False
+u_0700,2023-05-01,Canada,premium,71.84,False
+u_0701,2022-01-05,United States,basic,7.1,True
+u_0702,2024-11-08,US,premium,38.04,False
+u_0703,2023-07-18,United States,free,0.0,True
+u_0704,2022-10-15,US,free,2.82,True
+u_0705,2024-01-12,US,free,3.45,True
+u_0706,2023-08-05,Australia,basic,4.06,False
+u_0707,2022-02-02,United Kingdom,free,0.0,False
+u_0708,2024-04-11,US,free,0.0,False
+u_0709,2023-03-16,United States,free,0.0,False
+u_0710,2024-02-06,Canada,free,0.0,True
+u_0711,2024-09-07,US,free,,False
+u_0712,2023-10-31,United States,free,0.0,False
+u_0713,"January 06, 2024",US,free,0.43,True
+u_0714,2022-10-06,United Kingdom,basic,5.56,True
+u_0715,2022-09-18,US,free,0.0,True
+u_0716,2023-03-31,United States,free,5.29,False
+u_0717,2024-07-22,US,basic,4.59,True
+u_0718,2023-07-28,Australia,basic,13.35,False
+u_0719,2023-01-17,India,free,5.12,True
+u_0720,2024-05-03,Canada,basic,11.65,True
+u_0721,2024-07-23,United States,enterprise,218.45,True
+u_0722,2024-09-15,US,basic,24.31,True
+u_0723,2022-11-24,India,premium,59.49,False
+u_0724,2024-02-17,United States,basic,23.84,True
+u_0725,2023-10-09,US,free,2.14,False
+u_0726,2023-05-07,United States,free,,True
+u_0727,2023-03-11,India,basic,18.84,False
+u_0728,2022-05-06,US,enterprise,267.62,True
+u_0729,28/10/2022,UK,free,5.1,True
+u_0730,2023-08-25,Australia,free,0.0,True
+u_0731,2024-08-28,Canada,basic,15.33,True
+u_0732,2024-08-06,US,free,0.0,True
+u_0733,2022-07-25,US,basic,20.63,False
+u_0734,2024-01-14,US,basic,6.8,True
+u_0735,2024-01-10,United States,basic,23.14,True
+u_0736,2023-01-10,United States,premium,73.39,True
+u_0737,2023-05-08,UK,basic,4.46,True
+u_0738,2024-02-25,CAN,basic,24.67,True
+u_0739,2023-04-11,United States,basic,32.87,True
+u_0740,2024-06-03,India,premium,83.03,False
+u_0741,2023-08-08,United States,premium,90.69,False
+u_0742,2024-12-29,US,free,0.43,True
+u_0743,2023-11-30,Brazil,basic,1.71,True
+u_0744,2022-11-21,United States,free,0.0,True
+u_0745,2024-04-28,Australia,premium,69.59,True
+u_0746,2023-03-23,United States,basic,10.26,True
+u_0747,2023-08-08,United States,free,0.0,False
+u_0748,2022-05-30,United States,free,0.0,True
+u_0749,2022-05-11,United Kingdom,free,3.08,True
+u_0750,2023-09-22,United States,basic,3.38,False
+u_0751,2022-07-24,United States,free,0.0,True
+u_0752,2024-12-28,Australia,free,7.55,False
+u_0753,2024-07-25,Canada,premium,45.64,True
+u_0754,2024-02-07,United States,basic,,True
+u_0755,2024-03-15,Australia,free,0.0,False
+u_0756,2023-10-14,US,free,2.73,False
+u_0757,2022-03-08,Canada,enterprise,310.35,False
+u_0758,2023-03-06,United Kingdom,basic,20.93,True
+u_0759,2023-06-27,US,basic,22.27,False
+u_0760,2024-09-29,US,free,0.0,True
+u_0761,2022-08-29,US,free,5.57,True
+u_0762,2023-06-29,US,free,,True
+u_0763,2023-01-12,India,basic,17.08,True
+u_0764,2022-05-28,Australia,free,1.29,True
+u_0765,2022-04-23,US,free,2.43,True
+u_0766,2023-02-05,US,basic,17.7,False
+u_0767,2022-04-01,United Kingdom,premium,49.81,False
+u_0768,2022-03-15,United States,basic,4.2,False
+u_0769,2023-01-20,US,free,,True
+u_0770,2022-08-10,United States,free,0.93,False
+u_0771,2023-08-31,UK,free,5.75,True
+u_0772,2022-01-20,US,free,0.0,True
+u_0773,2022-11-27,United Kingdom,basic,3.76,False
+u_0774,"May 12, 2023",United States,free,4.83,True
+u_0775,2024-11-20,Germany,basic,12.04,True
+u_0776,2023-11-26,Australia,premium,71.16,True
+u_0777,2024-08-22,United States,enterprise,214.39,True
+u_0778,2023-01-11,I$NDA,free,8.22,False
+u_0779,2023-05-08,India,free,0.0,True
+u_0780,2023-04-06,US,free,0.0,True
+u_0781,2024-08-29,Australia,free,0.54,True
+u_0782,2024-11-16,Germany,free,0.0,True
+u_0783,2024-11-19,UK,free,1.65,False
+u_0784,2024-04-03,UK,basic,27.9,False
+u_0785,2023-07-05,US,free,0.0,False
+u_0786,2023-08-16,United States,premium,72.11,False
+u_0787,2024-12-09,US,free,0.0,True
+u_0788,2022-11-08,US,free,,False
+u_0789,2023-01-15,India,free,0.0,True
+u_0790,2024-09-09,United States,free,,True
+u_0791,2023-02-28,United States,free,5.41,True
+u_0792,2022-09-15,US,enterprise,232.06,True
+u_0793,2023-09-06,United States,free,0.0,False
+u_0794,2022-12-23,US,free,0.0,True
+u_0795,2024-09-02,United States,basic,0.0,False
+u_0796,2024-09-22,United States,free,0.0,True
+u_0797,2022-12-02,UK,basic,22.69,True
+u_0798,2023-08-03,US,free,0.0,False
+u_0799,2024-12-13,I$NDA,premium,51.21,True
+u_0800,2024-03-23,Canada,free,0.0,True
+u_0801,2022-08-25,US,free,8.72,True
+u_0802,2023-10-09,Australia,basic,21.15,False
+u_0803,2023-11-10,Australia,premium,54.97,False
+u_0804,2023-12-17,US,free,6.52,True
+u_0805,2022-01-28,United States,basic,,True
+u_0806,2022-11-24,US,free,5.05,True
+u_0807,2024-07-24,Germany,free,0.0,True
+u_0808,2022-09-22,United Kingdom,free,,True
+u_0809,2022-11-25,US,basic,11.75,True
+u_0810,2022-12-20,United States,free,0.0,True
+u_0811,2022-07-14,UK,basic,13.26,True
+u_0812,2022-06-20,United States,free,1.39,True
+u_0813,2023-01-15,US,premium,,True
+u_0814,2024-08-15,Canada,premium,74.97,True
+u_0815,2022-01-02,US,free,0.0,False
+u_0816,unknown,I$NDA,free,3.1,True
+u_0817,2022-03-08,Canada,free,2.21,False
+u_0818,2023-09-07,United States,premium,63.9,True
+u_0819,2022-10-02,US,free,0.0,True
+u_0820,2024-05-17,United States,basic,,True
+u_0821,2023-10-03,United States,free,2.75,True
+u_0822,2024-05-08,United States,basic,31.49,True
+u_0823,2023-11-27,United States,free,4.7,False
+u_0824,2023-04-26,UK,basic,22.81,False
+u_0825,2024-07-31,United Kingdom,enterprise,419.87,True
+u_0826,2023-06-06,US,free,2.58,True
+u_0827,2024-11-06,United States,premium,73.72,False
+u_0828,2024-12-25,US,free,,True
+u_0829,2023-10-07,I$NDA,free,0.0,True
+u_0830,2024-01-09,United States,premium,57.01,False
+u_0831,2022-10-07,US,basic,10.95,True
+u_0832,6/11/2024,Australia,basic,20.18,True
+u_0833,2024-01-06,UK,free,-50.93,True
+u_0834,2024-09-15,United Kingdom,free,0.69,True
+u_0835,2022-10-20,Canada,free,,True
+u_0836,2024-05-12,UK,basic,21.91,False
+u_0837,2023-05-30,US,free,0.0,True
+u_0838,2022-07-22,UK,free,0.0,False
+u_0839,2022-07-07,I$NDA,free,5.68,False
+u_0840,2023-09-08,United States,free,3.87,False
+u_0841,2022-12-16,United States,free,0.0,True
+u_0842,2022-04-22,United States,free,0.0,True
+u_0843,2023-04-13,United States,premium,,True
+u_0844,2023-12-16,United States,basic,21.23,True
+u_0845,2022-12-16,US,free,4.55,False
+u_0846,2024-11-12,United States,basic,17.27,True
+u_0847,2024-05-03,United States,premium,75.53,False
+u_0848,2023-07-16,US,free,0.32,True
+u_0849,2024-10-20,United Kingdom,free,0.0,True
+u_0850,2023-04-20,India,free,0.0,True
+u_0851,2022-06-02,Australia,free,0.09,False
+u_0852,2022-02-09,Canada,basic,14.72,True
+u_0853,2024-10-24,US,enterprise,146.29,True
+u_0854,2024-11-16,US,free,0.0,False
+u_0855,2024-03-20,Canada,basic,15.45,True
+u_0856,2022-04-23,US,free,0.0,True
+u_0857,2022-11-18,Canada,basic,13.03,True
+u_0858,2022-02-14,US,basic,18.9,True
+u_0859,2022-02-26,United States,free,0.0,True
+u_0860,2022-09-27,United States,free,0.0,True
+u_0861,2023-09-19,Australia,basic,12.21,True
+u_0862,2022-03-13,US,enterprise,292.03,True
+u_0863,2024-12-14,United States,free,8.44,True
+u_0864,2023-05-14,India,free,,True
+u_0865,2022-10-16,US,free,0.0,True
+u_0866,2023-07-20,United States,basic,13.14,True
+u_0867,2024-05-15,UK,basic,17.05,True
+u_0868,2022-12-09,US,basic,16.42,True
+u_0869,2022-02-22,United States,basic,19.31,True
+u_0870,2022-02-25,CAN,premium,48.49,False
+u_0871,2024-07-21,I$NDA,premium,66.17,False
+u_0872,2022-05-03,UK,free,2.1,True
+u_0873,2023-11-27,United States,basic,,True
+u_0874,2023-02-26,US,free,0.0,True
+u_0875,2024-05-01,United States,free,0.0,False
+u_0876,2022-03-08,US,premium,16.33,True
+u_0877,2024-09-10,India,basic,10.03,True
+u_0878,2024-02-04,United States,enterprise,221.16,True
+u_0879,2023-05-07,Canada,free,0.0,True
+u_0880,2022-08-15,United States,basic,16.32,True
+u_0881,2022-11-27,United States,free,0.0,False
+u_0882,"June 22, 2023",United States,free,0.0,False
+u_0883,2023-03-08,US,free,,True
+u_0884,2022-09-10,US,basic,7.57,True
+u_0885,2023-04-02,Canada,free,2.43,True
+u_0886,2022-06-15,US,premium,41.93,True
+u_0887,2022-01-02,United States,free,0.15,True
+u_0888,2022-11-14,United States,free,0.0,True
+u_0889,2022-05-03,Australia,basic,17.42,False
+u_0890,2023-03-31,US,free,0.62,False
+u_0891,2024-08-02,I$NDA,premium,60.41,True
+u_0892,2022-06-28,US,basic,2.71,True
+u_0893,2022-01-02,US,free,0.0,True
+u_0894,2022-05-02,UK,basic,10.33,True
+u_0895,2023-07-11,United States,basic,14.93,True
+u_0896,2022-10-28,UK,basic,10.13,True
+u_0897,2023-06-21,US,premium,76.25,True
+u_0898,2022-02-02,United States,basic,12.77,False
+u_0899,2022-12-31,US,basic,,True
+u_0900,2023-03-26,United States,free,0.0,True
+u_0901,2023-04-18,Canada,basic,16.81,True
+u_0902,2023-08-27,US,enterprise,267.87,False
+u_0903,2024-05-04,US,basic,30.03,True
+u_0904,2023-05-27,United States,basic,9.65,True
+u_0905,2024-07-10,India,free,0.0,True
+u_0906,2023-08-04,United States,basic,18.41,True
+u_0907,2022-10-13,US,enterprise,248.71,False
+u_0908,2022-09-08,Brazil,free,0.0,True
+u_0909,2022-12-20,United States,free,0.0,False
+u_0910,2023-10-17,Canada,basic,10.91,True
+u_0911,2022-09-23,US,free,0.0,True
+u_0912,2024-09-28,Germany,basic,1.19,True
+u_0913,2023-06-10,Canada,free,0.0,True
+u_0914,2024-08-03,Canada,free,0.0,True
+u_0915,2024-01-19,Canada,basic,19.67,True
+u_0916,2023-01-01,US,basic,19.81,True
+u_0917,2022-09-07,United States,basic,7.77,False
+u_0918,2024-03-25,UK,basic,12.92,False
+u_0919,2022-12-29,US,basic,0.13,True
+u_0920,2022-09-28,US,basic,11.05,True
+u_0921,2024-10-15,US,basic,,False
+u_0922,2023-06-13,US,basic,21.6,True
+u_0923,2022-02-23,United States,basic,9.3,False
+u_0924,2023-06-26,United States,free,5.26,True
+u_0925,2023-05-20,Canada,free,,False
+u_0926,2024-08-04,United States,basic,5.02,True
+u_0927,2024-02-19,US,premium,77.77,True
+u_0928,2022-07-29,US,basic,28.37,True
+u_0929,2022-06-14,India,free,,True
+u_0930,2023-10-23,United States,basic,14.68,False
+u_0931,2022-02-21,United States,free,0.0,False
+u_0932,2022-12-16,US,basic,0.0,True
+u_0933,2022-06-01,UK,premium,67.33,True
+u_0934,2022-01-23,United States,basic,12.14,True
+u_0935,2024-10-03,United Kingdom,basic,6.15,True
+u_0936,2022-04-09,Germany,free,0.33,True
+u_0937,2022-01-11,United States,free,0.58,False
+u_0938,2024-10-18,United Kingdom,premium,-92.48,False
+u_0939,2022-07-26,United States,basic,16.09,True
+u_0940,2024-06-13,US,basic,24.83,True
+u_0941,2022-02-04,United States,free,0.04,True
+u_0942,2022-06-18,UK,free,0.0,True
+u_0943,2022-05-02,United States,free,5.32,True
+u_0944,2024-02-13,Canada,free,0.0,True
+u_0945,2023-11-11,CAN,free,14.07,True
+u_0946,2023-06-05,Canada,premium,71.75,True
+u_0947,2022-09-22,US,basic,18.05,False
+u_0948,2022-04-08,United States,free,2.63,True
+u_0949,2023-09-16,United States,free,9.39,True
+u_0950,2022-09-10,Brazil,free,3.96,True
+u_0951,2023-10-09,US,premium,36.11,False
+u_0952,2024-01-23,United States,free,7.02,True
+u_0953,2024-07-19,Canada,basic,12.27,True
+u_0954,2023-06-25,United Kingdom,premium,66.93,True
+u_0955,2022-01-06,United States,free,0.0,True
+u_0956,2022-11-04,United Kingdom,basic,19.21,True
+u_0957,2024-07-23,United States,enterprise,214.17,False
+u_0958,2023-08-07,US,free,,True
+u_0959,2023-11-09,United States,free,0.0,True
+u_0960,2023-05-17,US,premium,99.65,True
+u_0961,2022-06-28,United States,premium,100.68,False
+u_0962,2024-09-08,US,basic,15.37,False
+u_0963,2024-04-26,Canada,basic,15.51,False
+u_0964,2024-12-25,US,free,0.0,True
+u_0965,2024-07-25,I$NDA,premium,,False
+u_0966,2022-11-15,United States,free,-76.34,True
+u_0967,2022-10-06,US,free,0.0,True
+u_0968,2022-09-30,I$NDA,basic,22.83,True
+u_0969,2024-10-03,United Kingdom,enterprise,220.39,False
+u_0970,2023-09-02,UK,premium,64.32,True
+u_0971,2023-05-13,Canada,free,0.0,True
+u_0972,2024-11-26,US,free,3.52,True
+u_0973,2023-10-23,United States,premium,-78.41,True
+u_0974,2024-09-22,United States,premium,77.98,True
+u_0975,2024-12-14,US,basic,26.69,True
+u_0976,2022-03-28,Canada,basic,8.23,False
+u_0977,2023-01-31,United States,free,,True
+u_0978,2024-03-14,United States,free,0.0,True
+u_0979,2024-06-09,Australia,free,0.0,True
+u_0980,2022-06-12,United Kingdom,free,3.86,True
+u_0981,2022-12-15,US,free,0.51,False
+u_0982,2023-08-24,Canada,premium,39.57,True
+u_0983,2024-05-25,US,free,,True
+u_0984,2022-05-04,United States,free,0.0,True
+u_0985,2023-10-20,United States,basic,18.93,False
+u_0986,2022-11-21,US,free,10.32,True
+u_0987,2022-08-25,UK,free,6.81,False
+u_0988,2023-07-19,India,basic,,True
+u_0989,2023-03-30,US,free,7.11,True
+u_0990,2023-11-28,US,basic,22.49,True
+u_0991,2022-12-14,US,premium,37.18,True
+u_0992,2024-06-20,India,free,0.0,True
+u_0993,2022-03-27,US,premium,84.72,True
+u_0994,2024-08-01,UK,premium,,False
+u_0995,2022-02-02,United States,premium,41.44,False
+u_0996,2024-03-16,Canada,basic,19.89,False
+u_0997,2023-01-15,United Kingdom,basic,0.0,True
+u_0998,2023-02-24,United States,basic,13.22,False
+u_0999,2022-01-21,United States,basic,24.1,False

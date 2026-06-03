@@ -1,0 +1,499 @@
+{
+  "task_id": "W4_campaign_analysis",
+  "seed": 3,
+  "config_name": "baseline",
+  "model": "claude-sonnet-4-5",
+  "start_time": 1780266305.337599,
+  "end_time": 1780266611.0059788,
+  "work_dir": "/var/folders/rm/lh7307zx1q56mhxch_gk4j4w0000gn/T/agent_eval_W4_campaign_analysis_u2gjk9al",
+  "artifact_dir": "runs/baseline__W4_campaign_analysis__seed3",
+  "steps": [
+    {
+      "step_index": 0,
+      "timestamp": 1780266306.105689,
+      "duration_seconds": 4.122900009155273,
+      "input_tokens": 965,
+      "output_tokens": 320,
+      "stop_reason": "tool_use",
+      "response_text": "I'll analyze the marketing campaign data to understand the causal impact of each campaign. Let me start by loading and exploring the data.",
+      "tool_call": {
+        "id": "toolu_0119wKQTZwuimSbymdQxpwY6",
+        "name": "python",
+        "input": {
+          "code": "\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nfrom datetime import datetime, timedelta\nimport warnings\nwarnings.filterwarnings('ignore')\n\n# Set style for visualizations\nsns.set_style(\"whitegrid\")\nplt.rcParams['figure.figsize'] = (12, 6)\n\n# Load the data\ncampaigns = pd.read_csv('campaigns.csv')\nuser_events = pd.read_csv('user_events.csv')\nusers = pd.read_csv('users.csv')\n\n# Display basic info about each dataset\nprint(\"=\" * 80)\nprint(\"CAMPAIGNS DATA\")\nprint(\"=\" * 80)\nprint(f\"Shape: {campaigns.shape}\")\nprint(f\"\\nColumns: {campaigns.columns.tolist()}\")\nprint(f\"\\nFirst few rows:\")\nprint(campaigns.head(10))\nprint(f\"\\nData types:\")\nprint(campaigns.dtypes)\nprint(f\"\\nBasic statistics:\")\nprint(campaigns.describe())\n"
+        }
+      },
+      "tool_result": {
+        "output": "---------------------------------------------------------------------------\nModuleNotFoundError                       Traceback (most recent call last)\nCell In[1], line 4\n      2 import numpy as np\n      3 import matplotlib.pyplot as plt\n----> 4 import seaborn as sns\n      5 from datetime import datetime, timedelta\n      6 import warnings\n\nModuleNotFoundError: No module named 'seaborn'\nModuleNotFoundError: No module named 'seaborn'",
+        "error": true,
+        "error_type": "ModuleNotFoundError"
+      }
+    },
+    {
+      "step_index": 1,
+      "timestamp": 1780266311.0531,
+      "duration_seconds": 4.867984771728516,
+      "input_tokens": 1413,
+      "output_tokens": 274,
+      "stop_reason": "tool_use",
+      "response_text": "",
+      "tool_call": {
+        "id": "toolu_019CDzaYGcUFtPv5enD54YGX",
+        "name": "python",
+        "input": {
+          "code": "\nimport pandas as pd\nimport numpy as np\nimport matplotlib.pyplot as plt\nfrom datetime import datetime, timedelta\nimport warnings\nwarnings.filterwarnings('ignore')\n\n# Set style for visualizations\nplt.rcParams['figure.figsize'] = (12, 6)\n\n# Load the data\ncampaigns = pd.read_csv('campaigns.csv')\nuser_events = pd.read_csv('user_events.csv')\nusers = pd.read_csv('users.csv')\n\n# Display basic info about each dataset\nprint(\"=\" * 80)\nprint(\"CAMPAIGNS DATA\")\nprint(\"=\" * 80)\nprint(f\"Shape: {campaigns.shape}\")\nprint(f\"\\nColumns: {campaigns.columns.tolist()}\")\nprint(f\"\\nFirst few rows:\")\nprint(campaigns.head(10))\nprint(f\"\\nData types:\")\nprint(campaigns.dtypes)\nprint(f\"\\nBasic statistics:\")\nprint(campaigns.describe())\n"
+        }
+      },
+      "tool_result": {
+        "output": "================================================================================\nCAMPAIGNS DATA\n================================================================================\nShape: (4, 9)\n\nColumns: ['campaign_id', 'name', 'channel', 'start_date', 'end_date', 'assignment_type', 'target_segment', 'intended_outcome', 'notes']\n\nFirst few rows:\n  campaign_id                      name channel  start_date    end_date  \\\n0        C001        Spring Email Blast   email  2024-04-01  2024-04-30   \n1        C002       Premium Upsell Push  in_app  2024-06-01  2024-06-30   \n2        C003  West Coast Regional Push   mixed  2024-07-01  2024-08-31   \n3        C004         Win-Back Campaign   email  2024-09-01  2024-09-30   \n\n  assignment_type    target_segment intended_outcome  \\\n0      randomized  all_active_users    monthly_spend   \n1        targeted  high_spend_users    monthly_spend   \n2     geo_rollout       west_region    monthly_spend   \n3      randomized    inactive_users     reactivation   \n\n                                               notes  \n0         Randomly assigned to 50% of eligible users  \n1  Targeted at users with monthly_spend > $80 in ...  \n2     Rolled out to West region only starting July 1  \n3  Randomly assigned to 50% of users inactive for...  \n\nData types:\ncampaign_id         object\nname                object\nchannel             object\nstart_date          object\nend_date            object\nassignment_type     object\ntarget_segment      object\nintended_outcome    object\nnotes               object\ndtype: object\n\nBasic statistics:\n       campaign_id                name channel  start_date    end_date  \\\ncount            4                   4       4           4           4   \nunique           4                   4       3           4           4   \ntop           C001  Spring Email Blast   email  2024-04-01  2024-04-30   \nfreq             1                   1       2           1           1   \n\n       assignment_type    target_segment intended_outcome  \\\ncount                4                 4                4   \nunique               3                 4                2   \ntop         randomized  all_active_users    monthly_spend   \nfreq                 2                 1                3   \n\n                                             notes  \ncount                                            4  \nunique                                           4  \ntop     Randomly assigned to 50% of eligible users  \nfreq                                             1  \n",
+        "error": false,
+        "error_type": null
+      }
+    },
+    {
+      "step_index": 2,
+      "timestamp": 1780266315.9384031,
+      "duration_seconds": 2.587096691131592,
+      "input_tokens": 2298,
+      "output_tokens": 176,
+      "stop_reason": "tool_use",
+      "response_text": "",
+      "tool_call": {
+        "id": "toolu_01UQT8btM3X1RfBNFFZxNYkn",
+        "name": "python",
+        "input": {
+          "code": "\nprint(\"\\n\" + \"=\" * 80)\nprint(\"USER EVENTS DATA\")\nprint(\"=\" * 80)\nprint(f\"Shape: {user_events.shape}\")\nprint(f\"\\nColumns: {user_events.columns.tolist()}\")\nprint(f\"\\nFirst few rows:\")\nprint(user_events.head(20))\nprint(f\"\\nData types:\")\nprint(user_events.dtypes)\nprint(f\"\\nEvent types:\")\nprint(user_events['event_type'].value_counts())\n"
+        }
+      },
+      "tool_result": {
+        "output": "---------------------------------------------------------------------------\nKeyError                                  Traceback (most recent call last)\nFile ~/agent-eval-blog/.venv/lib/python3.9/site-packages/pandas/core/indexes/base.py:3812, in Index.get_loc(self, key)\n   3811 try:\n-> 3812     return self._engine.get_loc(casted_key)\n   3813 except KeyError as err:\n\nFile pandas/_libs/index.pyx:167, in pandas._libs.index.IndexEngine.get_loc()\n\nFile pandas/_libs/index.pyx:196, in pandas._libs.index.IndexEngine.get_loc()\n\nFile pandas/_libs/hashtable_class_helper.pxi:7088, in pandas._libs.hashtable.PyObjectHashTable.get_item()\n\nFile pandas/_libs/hashtable_class_helper.pxi:7096, in pandas._libs.hashtable.PyObjectHashTable.get_item()\n\nKeyError: 'event_type'\n\nThe above exception was the direct cause of the following exception:\n\nKeyError                                  Traceback (most recent call last)\nCell In[3], line 11\n      9 print(user_events.dtypes)\n     10 print(f\"\\nEvent types:\")\n---> 11 print(user_events['event_type'].value_counts())\n\nFile ~/agent-eval-blog/.venv/lib/python3.9/site-packages/pandas/core/frame.py:4113, in DataFrame.__getitem__(self, key)\n   4111 if self.columns.nlevels > 1:\n   4112     return self._getitem_multilevel(key)\n-> 4113 indexer = self.columns.get_loc(key)\n   4114 if is_integer(indexer):\n   4115     indexer = [indexer]\n\nFile ~/agent-eval-blog/.venv/lib/python3.9/site-packages/pandas/core/indexes/base.py:3819, in Index.get_loc(self, key)\n   3814     if isinstance(casted_key, slice) or (\n   3815         isinstance(casted_key, abc.Iterable)\n   3816         and any(isinstance(x, slice) for x in casted_key)\n   3817     ):\n   3818         raise InvalidIndexError(key)\n-> 3819     raise KeyError(key) from err\n   3820 except TypeError:\n   3821     # If we have a listlike key, _check_indexing_error will raise\n   3822     #  InvalidIndexError. Otherwise we fall through and re-raise\n   3823     #  the TypeError.\n   3824     self._check_indexing_error(key)\n\nKeyError: 'event_type'\nKeyError: 'event_type'",
+        "error": true,
+        "error_type": "KeyError"
+      }
+    },
+    {
+      "step_index": 3,
+      "timestamp": 1780266319.019467,
+      "duration_seconds": 3.0385448932647705,
+      "input_tokens": 3168,
+      "output_tokens": 152,
+      "stop_reason": "tool_use",
+      "response_text": "",
+      "tool_call": {
+        "id": "toolu_01WCuS4iedypp4pK2c29aFYr",
+        "name": "python",
+        "input": {
+          "code": "\nprint(\"\\n\" + \"=\" * 80)\nprint(\"USER EVENTS DATA\")\nprint(\"=\" * 80)\nprint(f\"Shape: {user_events.shape}\")\nprint(f\"\\nColumns: {user_events.columns.tolist()}\")\nprint(f\"\\nFirst few rows:\")\nprint(user_events.head(20))\nprint(f\"\\nData types:\")\nprint(user_events.dtypes)\n"
+        }
+      },
+      "tool_result": {
+        "output": "\n================================================================================\nUSER EVENTS DATA\n================================================================================\nShape: (2144, 7)\n\nColumns: ['user_id', 'event_date', 'campaign_id', 'exposed', 'outcome_metric', 'pre_campaign_value', 'post_campaign_value']\n\nFirst few rows:\n   user_id  event_date campaign_id  exposed outcome_metric  \\\n0   u_0000  2024-04-15        C001    False  monthly_spend   \n1   u_0002  2024-04-15        C001    False  monthly_spend   \n2   u_0006  2024-04-15        C001     True  monthly_spend   \n3   u_0008  2024-04-15        C001     True  monthly_spend   \n4   u_0010  2024-04-15        C001    False  monthly_spend   \n5   u_0011  2024-04-15        C001    False  monthly_spend   \n6   u_0012  2024-04-15        C001    False  monthly_spend   \n7   u_0013  2024-04-15        C001     True  monthly_spend   \n8   u_0014  2024-04-15        C001     True  monthly_spend   \n9   u_0016  2024-04-15        C001     True  monthly_spend   \n10  u_0018  2024-04-15        C001    False  monthly_spend   \n11  u_0021  2024-04-15        C001     True  monthly_spend   \n12  u_0025  2024-04-15        C001     True  monthly_spend   \n13  u_0026  2024-04-15        C001    False  monthly_spend   \n14  u_0028  2024-04-15        C001    False  monthly_spend   \n15  u_0030  2024-04-15        C001     True  monthly_spend   \n16  u_0032  2024-04-15        C001     True  monthly_spend   \n17  u_0033  2024-04-15        C001    False  monthly_spend   \n18  u_0038  2024-04-15        C001    False  monthly_spend   \n19  u_0039  2024-04-15        C001     True  monthly_spend   \n\n    pre_campaign_value  post_campaign_value  \n0                20.00                15.51  \n1                 0.00                 0.80  \n2                 0.00                 0.00  \n3                20.00                22.32  \n4                 0.00                 0.00  \n5                 4.08                 2.08  \n6                 0.00                 0.00  \n7                 3.83                 8.54  \n8                 8.90                16.25  \n9                11.05                12.21  \n10                0.00                 0.00  \n11                2.77                 6.33  \n12               24.74                28.46  \n13               81.55                90.20  \n14               17.87                11.29  \n15               59.47                72.70  \n16                8.53                 9.24  \n17                1.08                 0.00  \n18               26.49                37.73  \n19               20.00                34.93  \n\nData types:\nuser_id                 object\nevent_date              object\ncampaign_id             object\nexposed                   bool\noutcome_metric          object\npre_campaign_value     float64\npost_campaign_value    float64\ndtype: object\n",
+        "error": false,
+        "error_type": null
+      }
+    },
+    {
+      "step_index": 4,
+      "timestamp": 1780266322.064446,
+      "duration_seconds": 3.0123398303985596,
+      "input_tokens": 4212,
+      "output_tokens": 160,
+      "stop_reason": "tool_use",
+      "response_text": "",
+      "tool_call": {
+        "id": "toolu_01QnsvJ2otT6Hrvhz2A7eacB",
+        "name": "python",
+        "input": {
+          "code": "\nprint(\"\\n\" + \"=\" * 80)\nprint(\"USERS DATA\")\nprint(\"=\" * 80)\nprint(f\"Shape: {users.shape}\")\nprint(f\"\\nColumns: {users.columns.tolist()}\")\nprint(f\"\\nFirst few rows:\")\nprint(users.head(20))\nprint(f\"\\nData types:\")\nprint(users.dtypes)\nprint(f\"\\nBasic statistics:\")\nprint(users.describe())\n"
+        }
+      },
+      "tool_result": {
+        "output": "\n================================================================================\nUSERS DATA\n================================================================================\nShape: (1000, 6)\n\nColumns: ['user_id', 'signup_date', 'country', 'plan_tier', 'monthly_spend', 'is_active']\n\nFirst few rows:\n   user_id signup_date         country plan_tier  monthly_spend  is_active\n0   u_0000  2023-03-19              US     basic         -14.19       True\n1   u_0001  2024-10-09              US      free           9.08      False\n2   u_0002  2024-01-25              US      free           0.00       True\n3   u_0003  2022-04-19              US     basic          16.74      False\n4   u_0004  2024-07-05              US     basic          14.71      False\n5   u_0005  2024-05-26              UK   premium          63.19      False\n6   u_0006  2024-09-15           India      free           0.00       True\n7   u_0007  2022-09-20   United States   premium          66.93      False\n8   u_0008  2024-12-08  United Kingdom      free            NaN       True\n9   u_0009  2022-12-18  United Kingdom      free           6.89      False\n10  u_0010  2024-05-28              UK      free           0.00       True\n11  u_0011  2023-09-27              US      free           4.08       True\n12  u_0012  2024-05-03              UK      free           0.00       True\n13  u_0013  2023-11-19   United States      free           3.83       True\n14  u_0014  2023-12-05       Australia     basic           8.90       True\n15  u_0015  2023-11-06           India      free         -35.70      False\n16  u_0016  2024-05-03           I$NDA      free          11.05       True\n17  u_0017  2024-03-20   United States      free           0.00      False\n18  u_0018  2022-05-28         Germany      free           0.00       True\n19  u_0019  2024-06-23              US      free           0.00      False\n\nData types:\nuser_id           object\nsignup_date       object\ncountry           object\nplan_tier         object\nmonthly_spend    float64\nis_active           bool\ndtype: object\n\nBasic statistics:\n       monthly_spend\ncount     930.000000\nmean       26.347516\nstd        61.488958\nmin       -99.720000\n25%         0.000000\n50%         6.325000\n75%        23.092500\nmax       419.870000\n",
+        "error": false,
+        "error_type": null
+      }
+    },
+    {
+      "step_index": 5,
+      "timestamp": 1780266325.084346,
+      "duration_seconds": 6.750787973403931,
+      "input_tokens": 5069,
+      "output_tokens": 448,
+      "stop_reason": "tool_use",
+      "response_text": "",
+      "tool_call": {
+        "id": "toolu_01PNxnofS7sTwtyrykTxmcwy",
+        "name": "python",
+        "input": {
+          "code": "\n# Let's explore the data more deeply\nprint(\"\\n\" + \"=\" * 80)\nprint(\"CAMPAIGN SUMMARY\")\nprint(\"=\" * 80)\nfor idx, row in campaigns.iterrows():\n    print(f\"\\nCampaign {row['campaign_id']}: {row['name']}\")\n    print(f\"  Channel: {row['channel']}\")\n    print(f\"  Period: {row['start_date']} to {row['end_date']}\")\n    print(f\"  Assignment: {row['assignment_type']}\")\n    print(f\"  Target: {row['target_segment']}\")\n    print(f\"  Outcome: {row['intended_outcome']}\")\n    print(f\"  Notes: {row['notes']}\")\n\nprint(\"\\n\" + \"=\" * 80)\nprint(\"USER EVENTS SUMMARY BY CAMPAIGN\")\nprint(\"=\" * 80)\nfor campaign_id in user_events['campaign_id'].unique():\n    campaign_data = user_events[user_events['campaign_id'] == campaign_id]\n    exposed = campaign_data['exposed'].sum()\n    not_exposed = (~campaign_data['exposed']).sum()\n    print(f\"\\n{campaign_id}:\")\n    print(f\"  Total users: {len(campaign_data)}\")\n    print(f\"  Exposed: {exposed} ({exposed/len(campaign_data)*100:.1f}%)\")\n    print(f\"  Control: {not_exposed} ({not_exposed/len(campaign_data)*100:.1f}%)\")\n    print(f\"  Outcome metric: {campaign_data['outcome_metric'].iloc[0]}\")\n"
+        }
+      },
+      "tool_result": {
+        "output": "\n================================================================================\nCAMPAIGN SUMMARY\n================================================================================\n\nCampaign C001: Spring Email Blast\n  Channel: email\n  Period: 2024-04-01 to 2024-04-30\n  Assignment: randomized\n  Target: all_active_users\n  Outcome: monthly_spend\n  Notes: Randomly assigned to 50% of eligible users\n\nCampaign C002: Premium Upsell Push\n  Channel: in_app\n  Period: 2024-06-01 to 2024-06-30\n  Assignment: targeted\n  Target: high_spend_users\n  Outcome: monthly_spend\n  Notes: Targeted at users with monthly_spend > $80 in prior period\n\nCampaign C003: West Coast Regional Push\n  Channel: mixed\n  Period: 2024-07-01 to 2024-08-31\n  Assignment: geo_rollout\n  Target: west_region\n  Outcome: monthly_spend\n  Notes: Rolled out to West region only starting July 1\n\nCampaign C004: Win-Back Campaign\n  Channel: email\n  Period: 2024-09-01 to 2024-09-30\n  Assignment: randomized\n  Target: inactive_users\n  Outcome: reactivation\n  Notes: Randomly assigned to 50% of users inactive for 60+ days\n\n================================================================================\nUSER EVENTS SUMMARY BY CAMPAIGN\n================================================================================\n\nC001:\n  Total users: 710\n  Exposed: 359 (50.6%)\n  Control: 351 (49.4%)\n  Outcome metric: monthly_spend\n\nC002:\n  Total users: 144\n  Exposed: 72 (50.0%)\n  Control: 72 (50.0%)\n  Outcome metric: monthly_spend\n\nC003:\n  Total users: 1000\n  Exposed: 274 (27.4%)\n  Control: 726 (72.6%)\n  Outcome metric: monthly_spend\n\nC004:\n  Total users: 290\n  Exposed: 147 (50.7%)\n  Control: 143 (49.3%)\n  Outcome metric: reactivated\n",
+        "error": false,
+        "error_type": null
+      }
+    },
+    {
+      "step_index": 6,
+      "timestamp": 1780266331.847899,
+      "duration_seconds": 9.367712020874023,
+      "input_tokens": 6033,
+      "output_tokens": 808,
+      "stop_reason": "tool_use",
+      "response_text": "",
+      "tool_call": {
+        "id": "toolu_01SxQEPNMoXPtUgHQTDSUw9E",
+        "name": "python",
+        "input": {
+          "code": "\n# Now let's analyze each campaign in detail\n\n# Campaign C001: Spring Email Blast (Randomized A/B Test)\nprint(\"=\" * 80)\nprint(\"CAMPAIGN C001: SPRING EMAIL BLAST - ANALYSIS\")\nprint(\"=\" * 80)\n\nc001_data = user_events[user_events['campaign_id'] == 'C001'].copy()\n\n# Calculate treatment effect\nc001_treated = c001_data[c001_data['exposed'] == True]\nc001_control = c001_data[c001_data['exposed'] == False]\n\nprint(f\"\\nTreatment Group (n={len(c001_treated)}):\")\nprint(f\"  Pre-campaign mean: ${c001_treated['pre_campaign_value'].mean():.2f}\")\nprint(f\"  Post-campaign mean: ${c001_treated['post_campaign_value'].mean():.2f}\")\nprint(f\"  Change: ${(c001_treated['post_campaign_value'] - c001_treated['pre_campaign_value']).mean():.2f}\")\n\nprint(f\"\\nControl Group (n={len(c001_control)}):\")\nprint(f\"  Pre-campaign mean: ${c001_control['pre_campaign_value'].mean():.2f}\")\nprint(f\"  Post-campaign mean: ${c001_control['post_campaign_value'].mean():.2f}\")\nprint(f\"  Change: ${(c001_control['post_campaign_value'] - c001_control['pre_campaign_value']).mean():.2f}\")\n\n# Calculate ATE (Average Treatment Effect)\nc001_ate = (c001_treated['post_campaign_value'].mean() - c001_treated['pre_campaign_value'].mean()) - \\\n           (c001_control['post_campaign_value'].mean() - c001_control['pre_campaign_value'].mean())\nprint(f\"\\nAverage Treatment Effect (ATE): ${c001_ate:.2f}\")\n\n# Check balance (pre-campaign values should be similar)\nprint(f\"\\nBalance Check (Pre-campaign values):\")\nprint(f\"  Treatment: ${c001_treated['pre_campaign_value'].mean():.2f}\")\nprint(f\"  Control: ${c001_control['pre_campaign_value'].mean():.2f}\")\nprint(f\"  Difference: ${c001_treated['pre_campaign_value'].mean() - c001_control['pre_campaign_value'].mean():.2f}\")\n\n# Simple t-test for statistical significance\nfrom scipy import stats\nt_stat, p_value = stats.ttest_ind(\n    c001_treated['post_campaign_value'] - c001_treated['pre_campaign_value'],\n    c001_control['post_campaign_value'] - c001_control['pre_campaign_value']\n)\nprint(f\"\\nStatistical Test:\")\nprint(f\"  t-statistic: {t_stat:.3f}\")\nprint(f\"  p-value: {p_value:.4f}\")\nprint(f\"  Significant at 5% level: {'Yes' if p_value < 0.05 else 'No'}\")\n"
+        }
+      },
+      "tool_result": {
+        "output": "================================================================================\nCAMPAIGN C001: SPRING EMAIL BLAST - ANALYSIS\n================================================================================\n\nTreatment Group (n=359):\n  Pre-campaign mean: $28.11\n  Post-campaign mean: $32.86\n  Change: $4.75\n\nControl Group (n=351):\n  Pre-campaign mean: $28.14\n  Post-campaign mean: $28.45\n  Change: $0.31\n\nAverage Treatment Effect (ATE): $4.44\n\nBalance Check (Pre-campaign values):\n  Treatment: $28.11\n  Control: $28.14\n  Difference: $-0.03\n\nStatistical Test:\n  t-statistic: 8.076\n  p-value: 0.0000\n  Significant at 5% level: Yes\n",
+        "error": false,
+        "error_type": null
+      }
+    },
+    {
+      "step_index": 7,
+      "timestamp": 1780266341.940475,
+      "duration_seconds": 12.83250904083252,
+      "input_tokens": 7033,
+      "output_tokens": 1077,
+      "stop_reason": "tool_use",
+      "response_text": "",
+      "tool_call": {
+        "id": "toolu_019c3xrRDYkU4yAAueG2N7k8",
+        "name": "python",
+        "input": {
+          "code": "\n# Campaign C002: Premium Upsell Push (Targeted - Selection Bias Issue)\nprint(\"\\n\" + \"=\" * 80)\nprint(\"CAMPAIGN C002: PREMIUM UPSELL PUSH - ANALYSIS\")\nprint(\"=\" * 80)\n\nc002_data = user_events[user_events['campaign_id'] == 'C002'].copy()\n\nc002_treated = c002_data[c002_data['exposed'] == True]\nc002_control = c002_data[c002_data['exposed'] == False]\n\nprint(f\"\\nTreatment Group (n={len(c002_treated)}):\")\nprint(f\"  Pre-campaign mean: ${c002_treated['pre_campaign_value'].mean():.2f}\")\nprint(f\"  Post-campaign mean: ${c002_treated['post_campaign_value'].mean():.2f}\")\nprint(f\"  Change: ${(c002_treated['post_campaign_value'] - c002_treated['pre_campaign_value']).mean():.2f}\")\n\nprint(f\"\\nControl Group (n={len(c002_control)}):\")\nprint(f\"  Pre-campaign mean: ${c002_control['pre_campaign_value'].mean():.2f}\")\nprint(f\"  Post-campaign mean: ${c002_control['post_campaign_value'].mean():.2f}\")\nprint(f\"  Change: ${(c002_control['post_campaign_value'] - c002_control['pre_campaign_value']).mean():.2f}\")\n\n# Naive ATE (biased due to selection)\nc002_naive_ate = (c002_treated['post_campaign_value'].mean() - c002_treated['pre_campaign_value'].mean()) - \\\n                 (c002_control['post_campaign_value'].mean() - c002_control['pre_campaign_value'].mean())\nprint(f\"\\nNaive ATE (BIASED): ${c002_naive_ate:.2f}\")\n\n# Check balance - this should show imbalance\nprint(f\"\\nBalance Check (Pre-campaign values):\")\nprint(f\"  Treatment: ${c002_treated['pre_campaign_value'].mean():.2f}\")\nprint(f\"  Control: ${c002_control['pre_campaign_value'].mean():.2f}\")\nprint(f\"  Difference: ${c002_treated['pre_campaign_value'].mean() - c002_control['pre_campaign_value'].mean():.2f}\")\nprint(f\"  *** WARNING: Large imbalance suggests selection bias ***\")\n\n# Note: The campaign notes say \"Targeted at users with monthly_spend > $80\"\n# But we have a control group - let's check if this was actually randomized among high spenders\nprint(f\"\\nCampaign Design Note:\")\nprint(f\"  Campaign targeted high-spend users (>$80)\")\nprint(f\"  But we have both treatment and control groups\")\nprint(f\"  This suggests randomization WITHIN the high-spend segment\")\n\n# Check if randomization was done properly within segment\nt_stat, p_value = stats.ttest_ind(\n    c002_treated['pre_campaign_value'],\n    c002_control['pre_campaign_value']\n)\nprint(f\"\\nBalance Test (t-test on pre-campaign values):\")\nprint(f\"  t-statistic: {t_stat:.3f}\")\nprint(f\"  p-value: {p_value:.4f}\")\nprint(f\"  Balanced: {'Yes' if p_value > 0.05 else 'No'}\")\n\n# Treatment effect test\nt_stat_effect, p_value_effect = stats.ttest_ind(\n    c002_treated['post_campaign_value'] - c002_treated['pre_campaign_value'],\n    c002_control['post_campaign_value'] - c002_control['pre_campaign_value']\n)\nprint(f\"\\nTreatment Effect Test:\")\nprint(f\"  t-statistic: {t_stat_effect:.3f}\")\nprint(f\"  p-value: {p_value_effect:.4f}\")\nprint(f\"  Significant at 5% level: {'Yes' if p_value_effect < 0.05 else 'No'}\")\n"
+        }
+      },
+      "tool_result": {
+        "output": "\n================================================================================\nCAMPAIGN C002: PREMIUM UPSELL PUSH - ANALYSIS\n================================================================================\n\nTreatment Group (n=72):\n  Pre-campaign mean: $200.35\n  Post-campaign mean: $210.07\n  Change: $9.72\n\nControl Group (n=72):\n  Pre-campaign mean: $64.77\n  Post-campaign mean: $64.73\n  Change: $-0.04\n\nNaive ATE (BIASED): $9.76\n\nBalance Check (Pre-campaign values):\n  Treatment: $200.35\n  Control: $64.77\n  Difference: $135.59\n  *** WARNING: Large imbalance suggests selection bias ***\n\nCampaign Design Note:\n  Campaign targeted high-spend users (>$80)\n  But we have both treatment and control groups\n  This suggests randomization WITHIN the high-spend segment\n\nBalance Test (t-test on pre-campaign values):\n  t-statistic: 11.839\n  p-value: 0.0000\n  Balanced: No\n\nTreatment Effect Test:\n  t-statistic: 9.364\n  p-value: 0.0000\n  Significant at 5% level: Yes\n",
+        "error": false,
+        "error_type": null
+      }
+    },
+    {
+      "step_index": 8,
+      "timestamp": 1780266354.797825,
+      "duration_seconds": 10.831244945526123,
+      "input_tokens": 8405,
+      "output_tokens": 839,
+      "stop_reason": "tool_use",
+      "response_text": "",
+      "tool_call": {
+        "id": "toolu_014TzawG4hGauZk2JQxuw87H",
+        "name": "python",
+        "input": {
+          "code": "\n# Campaign C003: West Coast Regional Push (Geographic Rollout - DiD candidate)\nprint(\"\\n\" + \"=\" * 80)\nprint(\"CAMPAIGN C003: WEST COAST REGIONAL PUSH - ANALYSIS\")\nprint(\"=\" * 80)\n\nc003_data = user_events[user_events['campaign_id'] == 'C003'].copy()\n\nc003_treated = c003_data[c003_data['exposed'] == True]  # West region\nc003_control = c003_data[c003_data['exposed'] == False]  # Other regions\n\nprint(f\"\\nTreatment Group - West Region (n={len(c003_treated)}):\")\nprint(f\"  Pre-campaign mean: ${c003_treated['pre_campaign_value'].mean():.2f}\")\nprint(f\"  Post-campaign mean: ${c003_treated['post_campaign_value'].mean():.2f}\")\nprint(f\"  Change: ${(c003_treated['post_campaign_value'] - c003_treated['pre_campaign_value']).mean():.2f}\")\n\nprint(f\"\\nControl Group - Other Regions (n={len(c003_control)}):\")\nprint(f\"  Pre-campaign mean: ${c003_control['pre_campaign_value'].mean():.2f}\")\nprint(f\"  Post-campaign mean: ${c003_control['post_campaign_value'].mean():.2f}\")\nprint(f\"  Change: ${(c003_control['post_campaign_value'] - c003_control['pre_campaign_value']).mean():.2f}\")\n\n# Difference-in-Differences estimator\nc003_did = (c003_treated['post_campaign_value'].mean() - c003_treated['pre_campaign_value'].mean()) - \\\n           (c003_control['post_campaign_value'].mean() - c003_control['pre_campaign_value'].mean())\nprint(f\"\\nDifference-in-Differences Estimate: ${c003_did:.2f}\")\n\n# Check parallel trends assumption (pre-campaign levels)\nprint(f\"\\nParallel Trends Check:\")\nprint(f\"  West Region pre-campaign: ${c003_treated['pre_campaign_value'].mean():.2f}\")\nprint(f\"  Other Regions pre-campaign: ${c003_control['pre_campaign_value'].mean():.2f}\")\nprint(f\"  Difference: ${c003_treated['pre_campaign_value'].mean() - c003_control['pre_campaign_value'].mean():.2f}\")\nprint(f\"  Note: Different baseline levels are OK for DiD, but trends should be parallel\")\n\n# Statistical test\nt_stat, p_value = stats.ttest_ind(\n    c003_treated['post_campaign_value'] - c003_treated['pre_campaign_value'],\n    c003_control['post_campaign_value'] - c003_control['pre_campaign_value']\n)\nprint(f\"\\nStatistical Test:\")\nprint(f\"  t-statistic: {t_stat:.3f}\")\nprint(f\"  p-value: {p_value:.4f}\")\nprint(f\"  Significant at 5% level: {'Yes' if p_value < 0.05 else 'No'}\")\n"
+        }
+      },
+      "tool_result": {
+        "output": "\n================================================================================\nCAMPAIGN C003: WEST COAST REGIONAL PUSH - ANALYSIS\n================================================================================\n\nTreatment Group - West Region (n=274):\n  Pre-campaign mean: $31.47\n  Post-campaign mean: $35.23\n  Change: $3.76\n\nControl Group - Other Regions (n=726):\n  Pre-campaign mean: $27.70\n  Post-campaign mean: $28.35\n  Change: $0.64\n\nDifference-in-Differences Estimate: $3.11\n\nParallel Trends Check:\n  West Region pre-campaign: $31.47\n  Other Regions pre-campaign: $27.70\n  Difference: $3.77\n  Note: Different baseline levels are OK for DiD, but trends should be parallel\n\nStatistical Test:\n  t-statistic: 7.780\n  p-value: 0.0000\n  Significant at 5% level: Yes\n",
+        "error": false,
+        "error_type": null
+      }
+    },
+    {
+      "step_index": 9,
+      "timestamp": 1780266365.654388,
+      "duration_seconds": 12.480825185775757,
+      "input_tokens": 9474,
+      "output_tokens": 981,
+      "stop_reason": "tool_use",
+      "response_text": "",
+      "tool_call": {
+        "id": "toolu_01FUmnk8yUwsn8EWZHee13qh",
+        "name": "python",
+        "input": {
+          "code": "\n# Campaign C004: Win-Back Campaign (Randomized, different outcome metric)\nprint(\"\\n\" + \"=\" * 80)\nprint(\"CAMPAIGN C004: WIN-BACK CAMPAIGN - ANALYSIS\")\nprint(\"=\" * 80)\n\nc004_data = user_events[user_events['campaign_id'] == 'C004'].copy()\n\nc004_treated = c004_data[c004_data['exposed'] == True]\nc004_control = c004_data[c004_data['exposed'] == False]\n\nprint(f\"\\nOutcome metric: {c004_data['outcome_metric'].iloc[0]}\")\nprint(f\"Note: This is a binary outcome (reactivated: yes/no)\")\n\nprint(f\"\\nTreatment Group (n={len(c004_treated)}):\")\nprint(f\"  Pre-campaign value: {c004_treated['pre_campaign_value'].mean():.4f}\")\nprint(f\"  Post-campaign value (reactivation rate): {c004_treated['post_campaign_value'].mean():.4f} ({c004_treated['post_campaign_value'].mean()*100:.2f}%)\")\n\nprint(f\"\\nControl Group (n={len(c004_control)}):\")\nprint(f\"  Pre-campaign value: {c004_control['pre_campaign_value'].mean():.4f}\")\nprint(f\"  Post-campaign value (reactivation rate): {c004_control['post_campaign_value'].mean():.4f} ({c004_control['post_campaign_value'].mean()*100:.2f}%)\")\n\n# Calculate lift in reactivation rate\nreactivation_lift = c004_treated['post_campaign_value'].mean() - c004_control['post_campaign_value'].mean()\nrelative_lift = (reactivation_lift / c004_control['post_campaign_value'].mean()) * 100 if c004_control['post_campaign_value'].mean() > 0 else 0\n\nprint(f\"\\nReactivation Rate Lift:\")\nprint(f\"  Absolute lift: {reactivation_lift:.4f} ({reactivation_lift*100:.2f} percentage points)\")\nprint(f\"  Relative lift: {relative_lift:.1f}%\")\n\n# Balance check\nprint(f\"\\nBalance Check (Pre-campaign values):\")\nprint(f\"  Treatment: {c004_treated['pre_campaign_value'].mean():.4f}\")\nprint(f\"  Control: {c004_control['pre_campaign_value'].mean():.4f}\")\nprint(f\"  Difference: {c004_treated['pre_campaign_value'].mean() - c004_control['pre_campaign_value'].mean():.4f}\")\n\n# Statistical test (proportion test)\nfrom scipy.stats import chi2_contingency\nreactivated_treatment = (c004_treated['post_campaign_value'] == 1).sum()\nnot_reactivated_treatment = (c004_treated['post_campaign_value'] == 0).sum()\nreactivated_control = (c004_control['post_campaign_value'] == 1).sum()\nnot_reactivated_control = (c004_control['post_campaign_value'] == 0).sum()\n\ncontingency_table = [[reactivated_treatment, not_reactivated_treatment],\n                     [reactivated_control, not_reactivated_control]]\nchi2, p_value, dof, expected = chi2_contingency(contingency_table)\n\nprint(f\"\\nStatistical Test (Chi-square test):\")\nprint(f\"  Chi-square statistic: {chi2:.3f}\")\nprint(f\"  p-value: {p_value:.4f}\")\nprint(f\"  Significant at 5% level: {'Yes' if p_value < 0.05 else 'No'}\")\n"
+        }
+      },
+      "tool_result": {
+        "output": "\n================================================================================\nCAMPAIGN C004: WIN-BACK CAMPAIGN - ANALYSIS\n================================================================================\n\nOutcome metric: reactivated\nNote: This is a binary outcome (reactivated: yes/no)\n\nTreatment Group (n=147):\n  Pre-campaign value: 0.0000\n  Post-campaign value (reactivation rate): 0.1565 (15.65%)\n\nControl Group (n=143):\n  Pre-campaign value: 0.0000\n  Post-campaign value (reactivation rate): 0.0490 (4.90%)\n\nReactivation Rate Lift:\n  Absolute lift: 0.1075 (10.75 percentage points)\n  Relative lift: 219.6%\n\nBalance Check (Pre-campaign values):\n  Treatment: 0.0000\n  Control: 0.0000\n  Difference: 0.0000\n\nStatistical Test (Chi-square test):\n  Chi-square statistic: 7.912\n  p-value: 0.0049\n  Significant at 5% level: Yes\n",
+        "error": false,
+        "error_type": null
+      }
+    },
+    {
+      "step_index": 10,
+      "timestamp": 1780266378.150027,
+      "duration_seconds": 10.975799083709717,
+      "input_tokens": 10720,
+      "output_tokens": 865,
+      "stop_reason": "tool_use",
+      "response_text": "Now let me create visualizations to support the analysis:",
+      "tool_call": {
+        "id": "toolu_017nQkyzNyFaNZpniFxQPbg9",
+        "name": "python",
+        "input": {
+          "code": "\n# Create visualizations for each campaign\n\n# Figure 1: Campaign C001 - A/B Test Results\nfig, axes = plt.subplots(1, 3, figsize=(15, 5))\n\n# Pre-campaign comparison\naxes[0].bar(['Treatment', 'Control'], \n            [c001_treated['pre_campaign_value'].mean(), c001_control['pre_campaign_value'].mean()],\n            color=['#2E86AB', '#A23B72'], alpha=0.7)\naxes[0].set_ylabel('Monthly Spend ($)', fontsize=11)\naxes[0].set_title('C001: Pre-Campaign Balance\\n(Should be similar)', fontsize=12, fontweight='bold')\naxes[0].set_ylim(0, 40)\nfor i, v in enumerate([c001_treated['pre_campaign_value'].mean(), c001_control['pre_campaign_value'].mean()]):\n    axes[0].text(i, v + 1, f'${v:.2f}', ha='center', fontweight='bold')\n\n# Post-campaign comparison\naxes[1].bar(['Treatment', 'Control'], \n            [c001_treated['post_campaign_value'].mean(), c001_control['post_campaign_value'].mean()],\n            color=['#2E86AB', '#A23B72'], alpha=0.7)\naxes[1].set_ylabel('Monthly Spend ($)', fontsize=11)\naxes[1].set_title('C001: Post-Campaign Spend\\n(Treatment higher)', fontsize=12, fontweight='bold')\naxes[1].set_ylim(0, 40)\nfor i, v in enumerate([c001_treated['post_campaign_value'].mean(), c001_control['post_campaign_value'].mean()]):\n    axes[1].text(i, v + 1, f'${v:.2f}', ha='center', fontweight='bold')\n\n# Change comparison\nchanges = [(c001_treated['post_campaign_value'] - c001_treated['pre_campaign_value']).mean(),\n           (c001_control['post_campaign_value'] - c001_control['pre_campaign_value']).mean()]\naxes[2].bar(['Treatment', 'Control'], changes, color=['#2E86AB', '#A23B72'], alpha=0.7)\naxes[2].set_ylabel('Change in Monthly Spend ($)', fontsize=11)\naxes[2].set_title('C001: Campaign Effect\\nATE = $4.44***', fontsize=12, fontweight='bold')\naxes[2].axhline(y=0, color='black', linestyle='--', linewidth=0.8)\naxes[2].set_ylim(-1, 6)\nfor i, v in enumerate(changes):\n    axes[2].text(i, v + 0.2, f'${v:.2f}', ha='center', fontweight='bold')\n\nplt.suptitle('Campaign C001: Spring Email Blast (Randomized A/B Test)', \n             fontsize=14, fontweight='bold', y=1.02)\nplt.tight_layout()\nplt.savefig('campaign_c001_analysis.png', dpi=300, bbox_inches='tight')\nprint(\"Saved: campaign_c001_analysis.png\")\nplt.close()\n"
+        }
+      },
+      "tool_result": {
+        "output": "Saved: campaign_c001_analysis.png\n",
+        "error": false,
+        "error_type": null
+      }
+    },
+    {
+      "step_index": 11,
+      "timestamp": 1780266389.468988,
+      "duration_seconds": 9.092535972595215,
+      "input_tokens": 11609,
+      "output_tokens": 867,
+      "stop_reason": "tool_use",
+      "response_text": "",
+      "tool_call": {
+        "id": "toolu_01WhUY8o4t7J7xbn2qQDpFuT",
+        "name": "python",
+        "input": {
+          "code": "\n# Figure 2: Campaign C002 - Selection Bias Issue\nfig, axes = plt.subplots(1, 3, figsize=(15, 5))\n\n# Pre-campaign comparison - showing imbalance\naxes[0].bar(['Treatment', 'Control'], \n            [c002_treated['pre_campaign_value'].mean(), c002_control['pre_campaign_value'].mean()],\n            color=['#2E86AB', '#A23B72'], alpha=0.7)\naxes[0].set_ylabel('Monthly Spend ($)', fontsize=11)\naxes[0].set_title('C002: Pre-Campaign Imbalance\\n\u26a0\ufe0f Selection Bias Warning', fontsize=12, fontweight='bold')\naxes[0].set_ylim(0, 220)\nfor i, v in enumerate([c002_treated['pre_campaign_value'].mean(), c002_control['pre_campaign_value'].mean()]):\n    axes[0].text(i, v + 5, f'${v:.2f}', ha='center', fontweight='bold')\n\n# Post-campaign comparison\naxes[1].bar(['Treatment', 'Control'], \n            [c002_treated['post_campaign_value'].mean(), c002_control['post_campaign_value'].mean()],\n            color=['#2E86AB', '#A23B72'], alpha=0.7)\naxes[1].set_ylabel('Monthly Spend ($)', fontsize=11)\naxes[1].set_title('C002: Post-Campaign Spend\\n(Groups still different)', fontsize=12, fontweight='bold')\naxes[1].set_ylim(0, 220)\nfor i, v in enumerate([c002_treated['post_campaign_value'].mean(), c002_control['post_campaign_value'].mean()]):\n    axes[1].text(i, v + 5, f'${v:.2f}', ha='center', fontweight='bold')\n\n# Change comparison\nchanges = [(c002_treated['post_campaign_value'] - c002_treated['pre_campaign_value']).mean(),\n           (c002_control['post_campaign_value'] - c002_control['pre_campaign_value']).mean()]\naxes[2].bar(['Treatment', 'Control'], changes, color=['#2E86AB', '#A23B72'], alpha=0.7)\naxes[2].set_ylabel('Change in Monthly Spend ($)', fontsize=11)\naxes[2].set_title('C002: Effect Estimate\\nNaive ATE = $9.76 (BIASED)', fontsize=12, fontweight='bold')\naxes[2].axhline(y=0, color='black', linestyle='--', linewidth=0.8)\naxes[2].set_ylim(-2, 12)\nfor i, v in enumerate(changes):\n    axes[2].text(i, v + 0.3, f'${v:.2f}', ha='center', fontweight='bold')\n\nplt.suptitle('Campaign C002: Premium Upsell Push (Targeted - Selection Bias)', \n             fontsize=14, fontweight='bold', y=1.02)\nplt.tight_layout()\nplt.savefig('campaign_c002_analysis.png', dpi=300, bbox_inches='tight')\nprint(\"Saved: campaign_c002_analysis.png\")\nplt.close()\n"
+        }
+      },
+      "tool_result": {
+        "output": "Saved: campaign_c002_analysis.png\n",
+        "error": false,
+        "error_type": null
+      }
+    },
+    {
+      "step_index": 12,
+      "timestamp": 1780266398.8791602,
+      "duration_seconds": 13.858207941055298,
+      "input_tokens": 12500,
+      "output_tokens": 998,
+      "stop_reason": "tool_use",
+      "response_text": "",
+      "tool_call": {
+        "id": "toolu_01FSYBeTNbJZH44PU3sGFYr7",
+        "name": "python",
+        "input": {
+          "code": "\n# Figure 3: Campaign C003 - Difference-in-Differences\nfig, axes = plt.subplots(1, 2, figsize=(14, 5))\n\n# Pre-post comparison for both groups\ngroups = ['West\\nRegion', 'Other\\nRegions']\npre_values = [c003_treated['pre_campaign_value'].mean(), c003_control['pre_campaign_value'].mean()]\npost_values = [c003_treated['post_campaign_value'].mean(), c003_control['post_campaign_value'].mean()]\n\nx = np.arange(len(groups))\nwidth = 0.35\n\nbars1 = axes[0].bar(x - width/2, pre_values, width, label='Pre-Campaign', color='#95B8D1', alpha=0.8)\nbars2 = axes[0].bar(x + width/2, post_values, width, label='Post-Campaign', color='#2E86AB', alpha=0.8)\n\naxes[0].set_ylabel('Monthly Spend ($)', fontsize=11)\naxes[0].set_title('C003: Pre vs Post by Region', fontsize=12, fontweight='bold')\naxes[0].set_xticks(x)\naxes[0].set_xticklabels(groups)\naxes[0].legend()\naxes[0].set_ylim(0, 40)\n\n# Add value labels\nfor bars in [bars1, bars2]:\n    for bar in bars:\n        height = bar.get_height()\n        axes[0].text(bar.get_x() + bar.get_width()/2., height + 0.5,\n                    f'${height:.2f}', ha='center', va='bottom', fontsize=9)\n\n# Difference-in-Differences visualization\ntime_points = ['Pre-Campaign', 'Post-Campaign']\nwest_values = [c003_treated['pre_campaign_value'].mean(), c003_treated['post_campaign_value'].mean()]\nother_values = [c003_control['pre_campaign_value'].mean(), c003_control['post_campaign_value'].mean()]\n\naxes[1].plot(time_points, west_values, marker='o', linewidth=2.5, markersize=10, \n            label='West Region (Treatment)', color='#2E86AB')\naxes[1].plot(time_points, other_values, marker='s', linewidth=2.5, markersize=10, \n            label='Other Regions (Control)', color='#A23B72')\n\n# Add annotations\naxes[1].annotate(f'DiD = ${c003_did:.2f}', \n                xy=(1, c003_treated['post_campaign_value'].mean()), \n                xytext=(0.7, 37),\n                fontsize=11, fontweight='bold',\n                bbox=dict(boxstyle='round,pad=0.5', facecolor='yellow', alpha=0.3),\n                arrowprops=dict(arrowstyle='->', connectionstyle='arc3,rad=0.3'))\n\naxes[1].set_ylabel('Monthly Spend ($)', fontsize=11)\naxes[1].set_title('C003: Difference-in-Differences\\nDiD Estimate = $3.11***', fontsize=12, fontweight='bold')\naxes[1].legend(loc='upper left')\naxes[1].grid(True, alpha=0.3)\naxes[1].set_ylim(25, 40)\n\nplt.suptitle('Campaign C003: West Coast Regional Push (Geographic Rollout)', \n             fontsize=14, fontweight='bold', y=1.02)\nplt.tight_layout()\nplt.savefig('campaign_c003_analysis.png', dpi=300, bbox_inches='tight')\nprint(\"Saved: campaign_c003_analysis.png\")\nplt.close()\n"
+        }
+      },
+      "tool_result": {
+        "output": "Saved: campaign_c003_analysis.png\n",
+        "error": false,
+        "error_type": null
+      }
+    },
+    {
+      "step_index": 13,
+      "timestamp": 1780266413.037662,
+      "duration_seconds": 9.54781198501587,
+      "input_tokens": 13522,
+      "output_tokens": 685,
+      "stop_reason": "tool_use",
+      "response_text": "",
+      "tool_call": {
+        "id": "toolu_01QxnrAAkpqTVCSnVdJasDDA",
+        "name": "python",
+        "input": {
+          "code": "\n# Figure 4: Campaign C004 - Win-Back Campaign (Binary Outcome)\nfig, axes = plt.subplots(1, 2, figsize=(12, 5))\n\n# Reactivation rates\nreactivation_rates = [c004_treated['post_campaign_value'].mean() * 100, \n                      c004_control['post_campaign_value'].mean() * 100]\n\nbars = axes[0].bar(['Treatment', 'Control'], reactivation_rates, \n                   color=['#2E86AB', '#A23B72'], alpha=0.7)\naxes[0].set_ylabel('Reactivation Rate (%)', fontsize=11)\naxes[0].set_title('C004: Reactivation Rates\\n(Binary Outcome)', fontsize=12, fontweight='bold')\naxes[0].set_ylim(0, 20)\nfor i, v in enumerate(reactivation_rates):\n    axes[0].text(i, v + 0.5, f'{v:.2f}%', ha='center', fontweight='bold')\n\n# Lift visualization\nlift_abs = reactivation_lift * 100\naxes[1].bar(['Absolute Lift\\n(percentage points)'], [lift_abs], color='#06A77D', alpha=0.7, width=0.4)\naxes[1].set_ylabel('Percentage Points', fontsize=11)\naxes[1].set_title(f'C004: Campaign Lift\\n+{lift_abs:.2f} pp ({relative_lift:.1f}% relative)', \n                 fontsize=12, fontweight='bold')\naxes[1].set_ylim(0, 15)\naxes[1].text(0, lift_abs + 0.3, f'+{lift_abs:.2f} pp', ha='center', fontweight='bold', fontsize=12)\n\n# Add statistical significance note\naxes[1].text(0, 1, 'p = 0.0049**\\nStatistically\\nSignificant', \n            ha='center', fontsize=10, \n            bbox=dict(boxstyle='round,pad=0.5', facecolor='lightgreen', alpha=0.5))\n\nplt.suptitle('Campaign C004: Win-Back Campaign (Randomized A/B Test)', \n             fontsize=14, fontweight='bold', y=1.02)\nplt.tight_layout()\nplt.savefig('campaign_c004_analysis.png', dpi=300, bbox_inches='tight')\nprint(\"Saved: campaign_c004_analysis.png\")\nplt.close()\n"
+        }
+      },
+      "tool_result": {
+        "output": "Saved: campaign_c004_analysis.png\n",
+        "error": false,
+        "error_type": null
+      }
+    },
+    {
+      "step_index": 14,
+      "timestamp": 1780266422.8381498,
+      "duration_seconds": 12.62458324432373,
+      "input_tokens": 14231,
+      "output_tokens": 789,
+      "stop_reason": "tool_use",
+      "response_text": "",
+      "tool_call": {
+        "id": "toolu_01SquRMcrbTxKcBmZGtoBs37",
+        "name": "python",
+        "input": {
+          "code": "\n# Create a summary comparison chart\nfig, ax = plt.subplots(figsize=(12, 6))\n\ncampaigns_summary = ['C001\\nSpring Email\\nBlast', \n                     'C002\\nPremium Upsell\\nPush', \n                     'C003\\nWest Coast\\nRegional', \n                     'C004\\nWin-Back\\nCampaign']\n\n# For C004, convert to dollar equivalent for visualization (assuming some value per reactivation)\n# Let's use the average spend as a proxy\navg_spend = users['monthly_spend'].mean()\nc004_dollar_effect = reactivation_lift * avg_spend\n\neffects = [c001_ate, c002_naive_ate, c003_did, c004_dollar_effect]\ncolors = ['#06A77D', '#E63946', '#06A77D', '#06A77D']  # Red for biased estimate\nalphas = [0.8, 0.5, 0.8, 0.8]  # Lower alpha for biased estimate\n\nbars = ax.bar(campaigns_summary, effects, color=colors, alpha=alphas, edgecolor='black', linewidth=1.5)\n\nax.set_ylabel('Estimated Effect on Monthly Spend ($)', fontsize=12)\nax.set_title('Campaign Performance Summary\\n(Caution: Different methodologies, not directly comparable)', \n             fontsize=14, fontweight='bold')\nax.axhline(y=0, color='black', linestyle='--', linewidth=1)\nax.grid(axis='y', alpha=0.3)\n\n# Add value labels and significance markers\nlabels = [f'${c001_ate:.2f}\\n***', \n          f'${c002_naive_ate:.2f}\\n\u26a0\ufe0f BIASED', \n          f'${c003_did:.2f}\\n***',\n          f'${c004_dollar_effect:.2f}\\n**']\n\nfor i, (bar, label) in enumerate(zip(bars, labels)):\n    height = bar.get_height()\n    ax.text(bar.get_x() + bar.get_width()/2., height + 0.2 if height > 0 else height - 0.5,\n            label, ha='center', va='bottom' if height > 0 else 'top', \n            fontweight='bold', fontsize=11)\n\n# Add legend\nfrom matplotlib.patches import Patch\nlegend_elements = [Patch(facecolor='#06A77D', alpha=0.8, label='Valid Causal Estimate'),\n                   Patch(facecolor='#E63946', alpha=0.5, label='Biased Estimate (Selection Issues)')]\nax.legend(handles=legend_elements, loc='upper right', fontsize=10)\n\nplt.tight_layout()\nplt.savefig('campaign_summary_comparison.png', dpi=300, bbox_inches='tight')\nprint(\"Saved: campaign_summary_comparison.png\")\nplt.close()\n"
+        }
+      },
+      "tool_result": {
+        "output": "---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[15], line 18\n     15 colors = ['#06A77D', '#E63946', '#06A77D', '#06A77D']  # Red for biased estimate\n     16 alphas = [0.8, 0.5, 0.8, 0.8]  # Lower alpha for biased estimate\n---> 18 bars = ax.bar(campaigns_summary, effects, color=colors, alpha=alphas, edgecolor='black', linewidth=1.5)\n     20 ax.set_ylabel('Estimated Effect on Monthly Spend ($)', fontsize=12)\n     21 ax.set_title('Campaign Performance Summary\\n(Caution: Different methodologies, not directly comparable)', \n     22              fontsize=14, fontweight='bold')\n\nFile ~/agent-eval-blog/.venv/lib/python3.9/site-packages/matplotlib/__init__.py:1476, in _preprocess_data.<locals>.inner(ax, data, *args, **kwargs)\n   1473 @functools.wraps(func)\n   1474 def inner(ax, *args, data=None, **kwargs):\n   1475     if data is None:\n-> 1476         return func(\n   1477             ax,\n   1478             *map(sanitize_sequence, args),\n   1479             **{k: sanitize_sequence(v) for k, v in kwargs.items()})\n   1481     bound = new_sig.bind(ax, *args, **kwargs)\n   1482     auto_label = (bound.arguments.get(label_namer)\n   1483                   or bound.kwargs.get(label_namer))\n\nFile ~/agent-eval-blog/.venv/lib/python3.9/site-packages/matplotlib/axes/_axes.py:2591, in Axes.bar(self, x, height, width, bottom, align, **kwargs)\n   2582 for l, b, w, h, c, e, lw, htch, lbl in args:\n   2583     r = mpatches.Rectangle(\n   2584         xy=(l, b), width=w, height=h,\n   2585         facecolor=c,\n   (...)\n   2589         hatch=htch,\n   2590         )\n-> 2591     r._internal_update(kwargs)\n   2592     r.get_path()._interpolation_steps = 100\n   2593     if orientation == 'vertical':\n\nFile ~/agent-eval-blog/.venv/lib/python3.9/site-packages/matplotlib/artist.py:1216, in Artist._internal_update(self, kwargs)\n   1209 def _internal_update(self, kwargs):\n   1210     \"\"\"\n   1211     Update artist properties without prenormalizing them, but generating\n   1212     errors as if calling `set`.\n   1213 \n   1214     The lack of prenormalization is to maintain backcompatibility.\n   1215     \"\"\"\n-> 1216     return self._update_props(\n   1217         kwargs, \"{cls.__name__}.set() got an unexpected keyword argument \"\n   1218         \"{prop_name!r}\")\n\nFile ~/agent-eval-blog/.venv/lib/python3.9/site-packages/matplotlib/artist.py:1192, in Artist._update_props(self, props, errfmt)\n   1189             if not callable(func):\n   1190                 raise AttributeError(\n   1191                     errfmt.format(cls=type(self), prop_name=k))\n-> 1192             ret.append(func(v))\n   1193 if ret:\n   1194     self.pchanged()\n\nFile ~/agent-eval-blog/.venv/lib/python3.9/site-packages/matplotlib/patches.py:423, in Patch.set_alpha(self, alpha)\n    421 def set_alpha(self, alpha):\n    422     # docstring inherited\n--> 423     super().set_alpha(alpha)\n    424     self._set_facecolor(self._original_facecolor)\n    425     self._set_edgecolor(self._original_edgecolor)\n\nFile ~/agent-eval-blog/.venv/lib/python3.9/site-packages/matplotlib/artist.py:1008, in Artist.set_alpha(self, alpha)\n    999 \"\"\"\n   1000 Set the alpha value used for blending - not supported on all backends.\n   1001 \n   (...)\n   1005     *alpha* must be within the 0-1 range, inclusive.\n   1006 \"\"\"\n   1007 if alpha is not None and not isinstance(alpha, Real):\n-> 1008     raise TypeError(\n   1009         f'alpha must be numeric or None, not {type(alpha)}')\n   1010 if alpha is not None and not (0 <= alpha <= 1):\n   1011     raise ValueError(f'alpha ({alpha}) is outside 0-1 range')\n\nTypeError: alpha must be numeric or None, not <class 'list'>\nTypeError: alpha must be numeric or None, not <class 'list'>",
+        "error": true,
+        "error_type": "TypeError"
+      }
+    },
+    {
+      "step_index": 15,
+      "timestamp": 1780266436.117907,
+      "duration_seconds": 14.81141996383667,
+      "input_tokens": 16294,
+      "output_tokens": 820,
+      "stop_reason": "tool_use",
+      "response_text": "",
+      "tool_call": {
+        "id": "toolu_0169KQtvDUDRb8tMCjUw7KZr",
+        "name": "python",
+        "input": {
+          "code": "\n# Create a summary comparison chart - fix alpha issue\nfig, ax = plt.subplots(figsize=(12, 6))\n\ncampaigns_summary = ['C001\\nSpring Email\\nBlast', \n                     'C002\\nPremium Upsell\\nPush', \n                     'C003\\nWest Coast\\nRegional', \n                     'C004\\nWin-Back\\nCampaign']\n\n# For C004, convert to dollar equivalent for visualization (assuming some value per reactivation)\navg_spend = users['monthly_spend'].mean()\nc004_dollar_effect = reactivation_lift * avg_spend\n\neffects = [c001_ate, c002_naive_ate, c003_did, c004_dollar_effect]\ncolors = ['#06A77D', '#E63946', '#06A77D', '#06A77D']  # Red for biased estimate\n\n# Create bars individually to set different alphas\nfor i, (campaign, effect, color) in enumerate(zip(campaigns_summary, effects, colors)):\n    alpha = 0.5 if i == 1 else 0.8  # Lower alpha for C002 (biased)\n    ax.bar(i, effect, color=color, alpha=alpha, edgecolor='black', linewidth=1.5)\n\nax.set_xticks(range(len(campaigns_summary)))\nax.set_xticklabels(campaigns_summary)\nax.set_ylabel('Estimated Effect on Monthly Spend ($)', fontsize=12)\nax.set_title('Campaign Performance Summary\\n(Caution: Different methodologies, not directly comparable)', \n             fontsize=14, fontweight='bold')\nax.axhline(y=0, color='black', linestyle='--', linewidth=1)\nax.grid(axis='y', alpha=0.3)\n\n# Add value labels and significance markers\nlabels = [f'${c001_ate:.2f}\\n***', \n          f'${c002_naive_ate:.2f}\\n\u26a0\ufe0f BIASED', \n          f'${c003_did:.2f}\\n***',\n          f'${c004_dollar_effect:.2f}\\n**']\n\nfor i, (effect, label) in enumerate(zip(effects, labels)):\n    ax.text(i, effect + 0.2 if effect > 0 else effect - 0.5,\n            label, ha='center', va='bottom' if effect > 0 else 'top', \n            fontweight='bold', fontsize=11)\n\n# Add legend\nfrom matplotlib.patches import Patch\nlegend_elements = [Patch(facecolor='#06A77D', alpha=0.8, label='Valid Causal Estimate'),\n                   Patch(facecolor='#E63946', alpha=0.5, label='Biased Estimate (Selection Issues)')]\nax.legend(handles=legend_elements, loc='upper right', fontsize=10)\n\nplt.tight_layout()\nplt.savefig('campaign_summary_comparison.png', dpi=300, bbox_inches='tight')\nprint(\"Saved: campaign_summary_comparison.png\")\nplt.close()\n"
+        }
+      },
+      "tool_result": {
+        "output": "Saved: campaign_summary_comparison.png\n",
+        "error": false,
+        "error_type": null
+      }
+    },
+    {
+      "step_index": 16,
+      "timestamp": 1780266451.166892,
+      "duration_seconds": 8.665801048278809,
+      "input_tokens": 17137,
+      "output_tokens": 585,
+      "stop_reason": "tool_use",
+      "response_text": "Now let me perform additional analysis for C002 to address the selection bias:",
+      "tool_call": {
+        "id": "toolu_01TR7icUPfjqFqUJL9pivqAh",
+        "name": "python",
+        "input": {
+          "code": "\n# Additional analysis for C002 - try to understand the selection mechanism better\nprint(\"=\" * 80)\nprint(\"DEEPER DIVE: CAMPAIGN C002 SELECTION BIAS ANALYSIS\")\nprint(\"=\" * 80)\n\n# The issue: treatment and control have very different pre-campaign values\n# Let's check if there's actually randomization within high-spenders\n\n# Check distribution of pre-campaign values\nprint(\"\\nDistribution of pre-campaign values in C002:\")\nprint(f\"Treatment group:\")\nprint(f\"  Min: ${c002_treated['pre_campaign_value'].min():.2f}\")\nprint(f\"  25th percentile: ${c002_treated['pre_campaign_value'].quantile(0.25):.2f}\")\nprint(f\"  Median: ${c002_treated['pre_campaign_value'].median():.2f}\")\nprint(f\"  75th percentile: ${c002_treated['pre_campaign_value'].quantile(0.75):.2f}\")\nprint(f\"  Max: ${c002_treated['pre_campaign_value'].max():.2f}\")\n\nprint(f\"\\nControl group:\")\nprint(f\"  Min: ${c002_control['pre_campaign_value'].min():.2f}\")\nprint(f\"  25th percentile: ${c002_control['pre_campaign_value'].quantile(0.25):.2f}\")\nprint(f\"  Median: ${c002_control['pre_campaign_value'].median():.2f}\")\nprint(f\"  75th percentile: ${c002_control['pre_campaign_value'].quantile(0.75):.2f}\")\nprint(f\"  Max: ${c002_control['pre_campaign_value'].max():.2f}\")\n\n# It appears the treatment group got high spenders, control got lower spenders\n# This is NOT proper randomization - it's a targeted campaign with a comparison group\nprint(\"\\n\" + \"=\" * 80)\nprint(\"CONCLUSION: C002 has severe selection bias\")\nprint(\"Treatment group systematically has higher pre-campaign spending\")\nprint(\"This violates the randomization assumption needed for causal inference\")\nprint(\"=\" * 80)\n"
+        }
+      },
+      "tool_result": {
+        "output": "================================================================================\nDEEPER DIVE: CAMPAIGN C002 SELECTION BIAS ANALYSIS\n================================================================================\n\nDistribution of pre-campaign values in C002:\nTreatment group:\n  Min: $80.65\n  25th percentile: $93.69\n  Median: $214.28\n  75th percentile: $281.77\n  Max: $419.87\n\nControl group:\n  Min: $50.21\n  25th percentile: $58.58\n  Median: $64.43\n  75th percentile: $71.90\n  Max: $79.41\n\n================================================================================\nCONCLUSION: C002 has severe selection bias\nTreatment group systematically has higher pre-campaign spending\nThis violates the randomization assumption needed for causal inference\n================================================================================\n",
+        "error": false,
+        "error_type": null
+      }
+    },
+    {
+      "step_index": 17,
+      "timestamp": 1780266459.8477561,
+      "duration_seconds": 8.936471939086914,
+      "input_tokens": 17911,
+      "output_tokens": 521,
+      "stop_reason": "tool_use",
+      "response_text": "",
+      "tool_call": {
+        "id": "toolu_01MQ1wkkydyXv8wKEdE6a5mi",
+        "name": "python",
+        "input": {
+          "code": "\n# Let's try a matching approach for C002 to get a better estimate\n# We'll use the pre-campaign value to match treatment and control units\n\nprint(\"\\n\" + \"=\" * 80)\nprint(\"ALTERNATIVE ANALYSIS FOR C002: MATCHING APPROACH\")\nprint(\"=\" * 80)\n\n# Since we have clear separation, let's try a different approach\n# We can look at the effect within the treatment group using pre-post comparison\n# But we need to account for regression to the mean\n\n# One approach: Use the control group trend to adjust for natural changes\n# Calculate the growth rate in control group\ncontrol_growth_rate = (c002_control['post_campaign_value'].mean() / c002_control['pre_campaign_value'].mean()) - 1\nprint(f\"\\nControl group growth rate: {control_growth_rate*100:.2f}%\")\n\n# Apply this growth rate to treatment group's pre-campaign value\nexpected_post_treatment = c002_treated['pre_campaign_value'].mean() * (1 + control_growth_rate)\nactual_post_treatment = c002_treated['post_campaign_value'].mean()\nadjusted_effect = actual_post_treatment - expected_post_treatment\n\nprint(f\"\\nAdjusted Analysis:\")\nprint(f\"  Treatment pre-campaign: ${c002_treated['pre_campaign_value'].mean():.2f}\")\nprint(f\"  Expected post (using control growth): ${expected_post_treatment:.2f}\")\nprint(f\"  Actual post: ${actual_post_treatment:.2f}\")\nprint(f\"  Adjusted treatment effect: ${adjusted_effect:.2f}\")\n\nprint(f\"\\nComparison:\")\nprint(f\"  Naive ATE (biased): ${c002_naive_ate:.2f}\")\nprint(f\"  Adjusted estimate: ${adjusted_effect:.2f}\")\nprint(f\"\\nNote: This assumes control group growth rate applies to treatment group\")\nprint(\"This is still a strong assumption but better than naive comparison\")\n"
+        }
+      },
+      "tool_result": {
+        "output": "\n================================================================================\nALTERNATIVE ANALYSIS FOR C002: MATCHING APPROACH\n================================================================================\n\nControl group growth rate: -0.06%\n\nAdjusted Analysis:\n  Treatment pre-campaign: $200.35\n  Expected post (using control growth): $200.22\n  Actual post: $210.07\n  Adjusted treatment effect: $9.85\n\nComparison:\n  Naive ATE (biased): $9.76\n  Adjusted estimate: $9.85\n\nNote: This assumes control group growth rate applies to treatment group\nThis is still a strong assumption but better than naive comparison\n",
+        "error": false,
+        "error_type": null
+      }
+    },
+    {
+      "step_index": 18,
+      "timestamp": 1780266468.7910988,
+      "duration_seconds": 11.931828260421753,
+      "input_tokens": 18578,
+      "output_tokens": 805,
+      "stop_reason": "tool_use",
+      "response_text": "",
+      "tool_call": {
+        "id": "toolu_01UzN3v9VmYz9dJeWrXbqEen",
+        "name": "python",
+        "input": {
+          "code": "\n# Create visualization for C002 alternative analysis\nfig, axes = plt.subplots(1, 2, figsize=(14, 5))\n\n# Show the selection bias problem\naxes[0].scatter(c002_control['pre_campaign_value'], \n               c002_control['post_campaign_value'],\n               alpha=0.6, s=50, color='#A23B72', label='Control Group')\naxes[0].scatter(c002_treated['pre_campaign_value'], \n               c002_treated['post_campaign_value'],\n               alpha=0.6, s=50, color='#2E86AB', label='Treatment Group')\n\n# Add diagonal line (no change)\nmax_val = max(c002_data['pre_campaign_value'].max(), c002_data['post_campaign_value'].max())\naxes[0].plot([0, max_val], [0, max_val], 'k--', alpha=0.3, label='No Change Line')\n\naxes[0].set_xlabel('Pre-Campaign Spend ($)', fontsize=11)\naxes[0].set_ylabel('Post-Campaign Spend ($)', fontsize=11)\naxes[0].set_title('C002: Selection Bias Visualization\\nGroups are NOT comparable', \n                 fontsize=12, fontweight='bold')\naxes[0].legend()\naxes[0].grid(True, alpha=0.3)\n\n# Comparison of estimates\nestimates = ['Naive\\nComparison', 'Adjusted\\nEstimate']\nvalues = [c002_naive_ate, adjusted_effect]\ncolors_est = ['#E63946', '#F4A261']\n\nbars = axes[1].bar(estimates, values, color=colors_est, alpha=0.7, edgecolor='black', linewidth=1.5)\naxes[1].set_ylabel('Estimated Effect ($)', fontsize=11)\naxes[1].set_title('C002: Effect Estimates\\n(Both have limitations)', fontsize=12, fontweight='bold')\naxes[1].set_ylim(0, 12)\n\nfor i, (bar, val) in enumerate(zip(bars, values)):\n    axes[1].text(bar.get_x() + bar.get_width()/2., val + 0.3,\n                f'${val:.2f}', ha='center', fontweight='bold', fontsize=11)\n    \n# Add warning text\naxes[1].text(0.5, 2, '\u26a0\ufe0f Caution:\\nSelection bias\\nmakes causal\\ninference difficult', \n            ha='center', fontsize=9,\n            bbox=dict(boxstyle='round,pad=0.5', facecolor='yellow', alpha=0.3))\n\nplt.suptitle('Campaign C002: Addressing Selection Bias', \n             fontsize=14, fontweight='bold', y=1.02)\nplt.tight_layout()\nplt.savefig('campaign_c002_selection_bias.png', dpi=300, bbox_inches='tight')\nprint(\"Saved: campaign_c002_selection_bias.png\")\nplt.close()\n"
+        }
+      },
+      "tool_result": {
+        "output": "Saved: campaign_c002_selection_bias.png\n",
+        "error": false,
+        "error_type": null
+      }
+    },
+    {
+      "step_index": 19,
+      "timestamp": 1780266480.999522,
+      "duration_seconds": 75.50293517112732,
+      "input_tokens": 19409,
+      "output_tokens": 3759,
+      "stop_reason": "tool_use",
+      "response_text": "Now let me create a comprehensive analysis plan document:",
+      "tool_call": {
+        "id": "toolu_01AVrBzmA4MGXWwEXQLU9jir",
+        "name": "python",
+        "input": {
+          "code": "\n# Create the comprehensive analysis plan\nanalysis_plan = \"\"\"# Marketing Campaign Analysis Plan\n## Causal Impact Assessment & Investment Recommendations\n\n**Prepared for:** Marketing Director  \n**Date:** 2024  \n**Objective:** Measure the causal impact of Q2-Q3 2024 marketing campaigns and provide data-driven recommendations for next quarter's investment decisions\n\n---\n\n## Executive Summary\n\nWe analyzed four marketing campaigns using appropriate causal inference methods based on each campaign's design. Our key findings:\n\n| Campaign | Method | Estimated Effect | Confidence | Recommendation |\n|----------|--------|-----------------|------------|----------------|\n| **C001: Spring Email Blast** | A/B Test | **+$4.44/user** | \u2705 High | **SCALE UP** |\n| **C002: Premium Upsell Push** | Targeted (Biased) | ~$9.85/user | \u26a0\ufe0f Low | **RE-TEST** with proper design |\n| **C003: West Coast Regional** | Difference-in-Differences | **+$3.11/user** | \u2705 High | **EXPAND** to other regions |\n| **C004: Win-Back Campaign** | A/B Test | **+10.75 pp reactivation** | \u2705 High | **CONTINUE** |\n\n**Bottom Line:** Campaigns C001, C003, and C004 show clear, statistically significant positive effects. C002 shows promise but needs proper randomized testing to confirm true causal impact.\n\n---\n\n## Campaign-by-Campaign Analysis\n\n### Campaign C001: Spring Email Blast\n\n#### 1. Data Type & Design\n- **Type:** Experimental (Randomized Controlled Trial)\n- **Assignment:** Random assignment to 50% of active users\n- **Sample Size:** 710 users (359 treatment, 351 control)\n- **Outcome:** Monthly spend ($)\n- **Period:** April 2024\n\n#### 2. Analytical Method: A/B Test Analysis\n\n**Why this method?**  \nRandom assignment creates comparable treatment and control groups, allowing us to directly attribute differences in outcomes to the campaign.\n\n**Balance Check:**\n- Pre-campaign spending was nearly identical between groups:\n  - Treatment: $28.11\n  - Control: $28.14\n  - Difference: -$0.03 \u2705\n- This confirms successful randomization\n\n**Results:**\n- **Treatment Effect:** +$4.75 per user (pre-to-post change)\n- **Control Effect:** +$0.31 per user (natural change)\n- **Average Treatment Effect (ATE):** **$4.44 per user**\n- **Statistical Significance:** p < 0.0001 (highly significant)\n\n#### 3. Caveats & Limitations\n- \u2705 **Minimal concerns** - this is the gold standard design\n- Assumes no spillover effects between treatment and control users\n- Effect measured over one month; long-term impact unknown\n- Results apply to \"active users\" segment only\n\n#### 4. Investment Recommendation\n**STRONG RECOMMENDATION TO SCALE UP**\n- Clear causal evidence of positive impact\n- Cost-effective if email campaign costs < $4.44 per user\n- Consider testing variations (subject lines, timing, content) to optimize further\n\n---\n\n### Campaign C002: Premium Upsell Push\n\n#### 1. Data Type & Design\n- **Type:** Observational (Targeted campaign with comparison group)\n- **Assignment:** Targeted at high-spend users (>$80/month)\n- **Sample Size:** 144 users (72 treatment, 72 control)\n- **Outcome:** Monthly spend ($)\n- **Period:** June 2024\n\n#### 2. Analytical Method: Caution - Selection Bias Present\n\n**Why this is problematic:**  \nThe treatment and control groups are fundamentally different:\n- Treatment group pre-campaign: $200.35\n- Control group pre-campaign: $64.77\n- **Difference: $135.59** \u26a0\ufe0f\n\nThis massive imbalance indicates the groups were NOT randomly assigned. The treatment group consists of much higher spenders, making direct comparison invalid.\n\n**Attempted Adjustments:**\n1. **Naive comparison:** $9.76 effect (BIASED - not trustworthy)\n2. **Growth-rate adjustment:** $9.85 effect (better, but still assumes parallel trends)\n\n**Why we can't trust these estimates:**\n- High spenders may naturally have different spending trajectories\n- Regression to the mean could explain changes\n- Selection into treatment based on spending creates confounding\n\n#### 3. Caveats & Limitations\n- \u26a0\ufe0f **MAJOR LIMITATION:** Selection bias makes causal inference unreliable\n- Cannot determine if the $9.85 effect is real or due to pre-existing differences\n- Would need matching, propensity scores, or instrumental variables (not available in current data)\n- Best approach: Re-run as proper randomized experiment\n\n#### 4. Investment Recommendation\n**RECOMMEND RE-TESTING WITH PROPER RANDOMIZATION**\n- The campaign *might* be effective, but we cannot be confident\n- **Action Plan:**\n  1. Design a proper A/B test within the high-spend segment\n  2. Randomly assign 50% to treatment, 50% to control\n  3. Ensure balance on pre-campaign spending\n  4. Then measure true causal effect\n- Do NOT scale based on current evidence alone\n\n---\n\n### Campaign C003: West Coast Regional Push\n\n#### 1. Data Type & Design\n- **Type:** Quasi-Experimental (Geographic rollout)\n- **Assignment:** All users in West region received campaign; other regions did not\n- **Sample Size:** 1,000 users (274 West, 726 Other)\n- **Outcome:** Monthly spend ($)\n- **Period:** July-August 2024\n\n#### 2. Analytical Method: Difference-in-Differences (DiD)\n\n**Why this method?**  \nGeographic rollouts create natural experiments. DiD compares the change in the treatment region to the change in control regions, accounting for time trends that affect all regions.\n\n**DiD Formula:**\n```\nEffect = (West_Post - West_Pre) - (Other_Post - Other_Pre)\n       = ($35.23 - $31.47) - ($28.35 - $27.70)\n       = $3.76 - $0.64\n       = $3.11\n```\n\n**Key Assumption: Parallel Trends**\n- Without the campaign, West and Other regions would have followed similar trends\n- Pre-campaign difference ($3.77) is acceptable - DiD accounts for level differences\n- Both regions showed positive trends, but West increased more\n\n**Results:**\n- **West Region Change:** +$3.76\n- **Other Regions Change:** +$0.64\n- **DiD Estimate:** **+$3.11 per user**\n- **Statistical Significance:** p < 0.0001 (highly significant)\n\n#### 3. Caveats & Limitations\n- Assumes parallel trends (cannot fully verify with only 2 time periods)\n- Regional differences beyond the campaign could affect results\n- Spillover effects if West users interact with users in other regions\n- Seasonal or regional economic factors could confound results\n- Would be stronger with multiple pre-campaign periods to verify parallel trends\n\n#### 4. Investment Recommendation\n**RECOMMEND EXPANDING TO OTHER REGIONS**\n- Strong evidence of positive causal impact\n- Natural next step: Roll out to another region and measure again\n- Consider staggered rollout to additional regions for continued learning\n- Monitor for diminishing returns in saturated markets\n\n---\n\n### Campaign C004: Win-Back Campaign\n\n#### 1. Data Type & Design\n- **Type:** Experimental (Randomized Controlled Trial)\n- **Assignment:** Random assignment to 50% of inactive users (60+ days)\n- **Sample Size:** 290 users (147 treatment, 143 control)\n- **Outcome:** Reactivation (binary: yes/no)\n- **Period:** September 2024\n\n#### 2. Analytical Method: A/B Test for Binary Outcomes\n\n**Why this method?**  \nRandom assignment with binary outcome. We compare reactivation rates between treatment and control groups.\n\n**Balance Check:**\n- Both groups had zero activity pre-campaign (by design - targeting inactive users)\n- Perfect balance \u2705\n\n**Results:**\n- **Treatment Reactivation Rate:** 15.65%\n- **Control Reactivation Rate:** 4.90%\n- **Absolute Lift:** **+10.75 percentage points**\n- **Relative Lift:** **+219.6%** (more than 3x the control rate)\n- **Statistical Significance:** p = 0.0049 (significant at 1% level)\n\n**Business Impact:**\n- Out of 147 treated users, 23 reactivated\n- Out of 143 control users, only 7 reactivated\n- **Incremental reactivations:** ~16 users\n- Value depends on lifetime value of reactivated users\n\n#### 3. Caveats & Limitations\n- \u2705 **Strong design** - minimal concerns\n- Reactivation measured immediately; need to track long-term retention\n- Some control users reactivated naturally (4.9%) - campaign accelerated this\n- Cost-effectiveness depends on:\n  - Cost per email sent\n  - Lifetime value of reactivated users\n  - Retention rate of reactivated users\n\n#### 4. Investment Recommendation\n**STRONG RECOMMENDATION TO CONTINUE**\n- Clear, large, statistically significant effect\n- Win-back campaigns are typically cost-effective (email is cheap)\n- **Action items:**\n  1. Track 3-month and 6-month retention of reactivated users\n  2. Calculate ROI: (LTV of reactivated users \u00d7 16) - campaign costs\n  3. Test variations: different messaging, incentives, timing\n  4. Consider expanding to users inactive 30-60 days\n\n---\n\n## Cross-Campaign Insights\n\n### What Works\n1. **Randomized experiments (C001, C004)** provide the clearest evidence\n2. **Email campaigns** show strong performance (C001, C004)\n3. **Targeted segments** can be effective, but need proper testing (C002)\n4. **Geographic rollouts** (C003) work well when randomization isn't feasible\n\n### What to Avoid\n1. **Non-randomized targeting** without proper controls (C002 issue)\n2. **Comparing fundamentally different groups** and calling it causal\n3. **Scaling campaigns** without statistical validation\n\n### Methodological Lessons\n- **Gold Standard:** Randomized A/B tests (C001, C004)\n- **Silver Standard:** Quasi-experimental designs like DiD (C003)\n- **Problematic:** Targeted campaigns without randomization (C002)\n\n---\n\n## Recommendations for Next Quarter\n\n### Immediate Actions\n\n1. **SCALE:** Spring Email Blast (C001)\n   - Proven $4.44 per user effect\n   - Low cost, high reach\n   - Test monthly cadence\n\n2. **EXPAND:** West Coast Regional Push (C003)\n   - Roll out to 1-2 additional regions\n   - Use staggered timing for continued DiD analysis\n   - Monitor for saturation effects\n\n3. **CONTINUE:** Win-Back Campaign (C004)\n   - Maintain monthly cadence for inactive users\n   - Track long-term retention metrics\n   - Test earlier intervention (30-day inactive)\n\n4. **RE-TEST:** Premium Upsell Push (C002)\n   - Design proper randomized experiment\n   - Randomly assign within high-spend segment\n   - Measure true causal effect before scaling\n\n### Testing Framework for New Campaigns\n\nFor any new campaign, follow this decision tree:\n\n```\nCan you randomize?\n\u251c\u2500 YES \u2192 Run A/B test (gold standard)\n\u2502         - 50/50 split\n\u2502         - Check balance\n\u2502         - Measure ATE\n\u2502\n\u2514\u2500 NO \u2192 Is there a natural control group?\n    \u251c\u2500 YES (geographic, temporal) \u2192 Use DiD or similar\n    \u2502                                - Verify parallel trends\n    \u2502                                - Account for confounders\n    \u2502\n    \u2514\u2500 NO \u2192 Use causal inference methods\n                - Propensity score matching\n                - Regression with controls\n                - Instrumental variables\n                - BUT: Results less reliable\n```\n\n### Budget Allocation Guidance\n\nBased on estimated effects and typical costs:\n\n| Campaign Type | Priority | Suggested Budget % |\n|--------------|----------|-------------------|\n| Email to active users (C001) | High | 30% |\n| Geographic expansion (C003) | High | 25% |\n| Win-back campaigns (C004) | High | 20% |\n| Premium upsell (C002 retest) | Medium | 15% |\n| New experiments | Medium | 10% |\n\n---\n\n## Technical Appendix\n\n### Statistical Methods Used\n\n1. **A/B Test Analysis (C001, C004)**\n   - Two-sample t-test for continuous outcomes\n   - Chi-square test for binary outcomes\n   - Significance level: \u03b1 = 0.05\n\n2. **Difference-in-Differences (C003)**\n   - DiD = (Y_treat,post - Y_treat,pre) - (Y_control,post - Y_control,pre)\n   - Assumes parallel trends\n   - Robust to time-invariant differences between groups\n\n3. **Selection Bias Assessment (C002)**\n   - Balance tests on pre-treatment covariates\n   - Growth rate adjustment (sensitivity analysis)\n   - Identified as insufficient for causal claims\n\n### Data Quality Notes\n- All campaigns have pre/post measurements\n- Sample sizes adequate for statistical power\n- Missing data minimal\n- Outcome metrics clearly defined\n\n### Significance Levels\n- *** p < 0.001 (highly significant)\n- ** p < 0.01 (very significant)\n- * p < 0.05 (significant)\n- \u26a0\ufe0f Biased estimate (not reliable)\n\n---\n\n## Conclusion\n\nWe have strong causal evidence that three of four campaigns (C001, C003, C004) generated positive returns. These should be scaled or continued. Campaign C002 requires proper randomized testing before scaling.\n\nThe key to successful campaign measurement is **proper experimental design**. When randomization is possible, use it. When not, employ appropriate quasi-experimental methods and clearly communicate limitations.\n\n**Next Steps:**\n1. Implement recommendations above\n2. Establish standardized A/B testing protocols\n3. Build dashboard for ongoing campaign monitoring\n4. Schedule quarterly review of campaign performance\n\n---\n\n**Questions or need clarification?** This analysis provides the foundation for evidence-based marketing decisions. All estimates are based on rigorous causal inference methods appropriate to each campaign's design.\n\"\"\"\n\n# Save the analysis plan\nwith open('analysis_plan.md', 'w') as f:\n    f.write(analysis_plan)\n\nprint(\"=\" * 80)\nprint(\"ANALYSIS PLAN SAVED: analysis_plan.md\")\nprint(\"=\" * 80)\nprint(\"\\nGenerated files:\")\nprint(\"  1. analysis_plan.md - Comprehensive analysis plan\")\nprint(\"  2. campaign_c001_analysis.png - C001 A/B test results\")\nprint(\"  3. campaign_c002_analysis.png - C002 selection bias visualization\")\nprint(\"  4. campaign_c002_selection_bias.png - C002 detailed bias analysis\")\nprint(\"  5. campaign_c003_analysis.png - C003 DiD analysis\")\nprint(\"  6. campaign_c004_analysis.png - C004 win-back results\")\nprint(\"  7. campaign_summary_comparison.png - Overall comparison\")\nprint(\"=\" * 80)\n"
+        }
+      },
+      "tool_result": {
+        "output": "================================================================================\nANALYSIS PLAN SAVED: analysis_plan.md\n================================================================================\n\nGenerated files:\n  1. analysis_plan.md - Comprehensive analysis plan\n  2. campaign_c001_analysis.png - C001 A/B test results\n  3. campaign_c002_analysis.png - C002 selection bias visualization\n  4. campaign_c002_selection_bias.png - C002 detailed bias analysis\n  5. campaign_c003_analysis.png - C003 DiD analysis\n  6. campaign_c004_analysis.png - C004 win-back results\n  7. campaign_summary_comparison.png - Overall comparison\n================================================================================\n",
+        "error": false,
+        "error_type": null
+      }
+    },
+    {
+      "step_index": 20,
+      "timestamp": 1780266556.527827,
+      "duration_seconds": 25.26934790611267,
+      "input_tokens": 23334,
+      "output_tokens": 2049,
+      "stop_reason": "tool_use",
+      "response_text": "Let me create one final summary visualization:",
+      "tool_call": {
+        "id": "toolu_015f3AKSQDmhd1ZR9v4Do2NC",
+        "name": "python",
+        "input": {
+          "code": "\n# Create a comprehensive methodology summary visualization\nfig = plt.figure(figsize=(14, 10))\ngs = fig.add_gridspec(3, 2, hspace=0.4, wspace=0.3)\n\n# Title\nfig.suptitle('Campaign Analysis Methodology & Results Summary', \n             fontsize=16, fontweight='bold', y=0.98)\n\n# Campaign C001\nax1 = fig.add_subplot(gs[0, 0])\nax1.text(0.5, 0.95, 'C001: Spring Email Blast', ha='center', va='top', \n         fontsize=12, fontweight='bold', transform=ax1.transAxes)\nax1.text(0.05, 0.75, '\ud83d\udcca Design: Randomized A/B Test', transform=ax1.transAxes, fontsize=10)\nax1.text(0.05, 0.60, '\u2705 Validity: HIGH (Gold Standard)', transform=ax1.transAxes, fontsize=10, color='green', fontweight='bold')\nax1.text(0.05, 0.45, '\ud83d\udcc8 Effect: +$4.44 per user***', transform=ax1.transAxes, fontsize=10, fontweight='bold')\nax1.text(0.05, 0.30, '\ud83d\udca1 Recommendation: SCALE UP', transform=ax1.transAxes, fontsize=10, \n         bbox=dict(boxstyle='round,pad=0.5', facecolor='lightgreen', alpha=0.5))\nax1.text(0.05, 0.10, 'Method: Direct comparison of\\nrandomly assigned groups', \n         transform=ax1.transAxes, fontsize=8, style='italic')\nax1.axis('off')\n\n# Campaign C002\nax2 = fig.add_subplot(gs[0, 1])\nax2.text(0.5, 0.95, 'C002: Premium Upsell Push', ha='center', va='top', \n         fontsize=12, fontweight='bold', transform=ax2.transAxes)\nax2.text(0.05, 0.75, '\ud83d\udcca Design: Targeted (Non-random)', transform=ax2.transAxes, fontsize=10)\nax2.text(0.05, 0.60, '\u26a0\ufe0f Validity: LOW (Selection Bias)', transform=ax2.transAxes, fontsize=10, color='red', fontweight='bold')\nax2.text(0.05, 0.45, '\ud83d\udcc8 Effect: ~$9.85 per user (uncertain)', transform=ax2.transAxes, fontsize=10, fontweight='bold')\nax2.text(0.05, 0.30, '\ud83d\udca1 Recommendation: RE-TEST', transform=ax2.transAxes, fontsize=10,\n         bbox=dict(boxstyle='round,pad=0.5', facecolor='yellow', alpha=0.5))\nax2.text(0.05, 0.10, 'Problem: Treatment & control\\ngroups not comparable', \n         transform=ax2.transAxes, fontsize=8, style='italic')\nax2.axis('off')\n\n# Campaign C003\nax3 = fig.add_subplot(gs[1, 0])\nax3.text(0.5, 0.95, 'C003: West Coast Regional', ha='center', va='top', \n         fontsize=12, fontweight='bold', transform=ax3.transAxes)\nax3.text(0.05, 0.75, '\ud83d\udcca Design: Geographic Rollout', transform=ax3.transAxes, fontsize=10)\nax3.text(0.05, 0.60, '\u2705 Validity: HIGH (Quasi-Experimental)', transform=ax3.transAxes, fontsize=10, color='green', fontweight='bold')\nax3.text(0.05, 0.45, '\ud83d\udcc8 Effect: +$3.11 per user***', transform=ax3.transAxes, fontsize=10, fontweight='bold')\nax3.text(0.05, 0.30, '\ud83d\udca1 Recommendation: EXPAND', transform=ax3.transAxes, fontsize=10,\n         bbox=dict(boxstyle='round,pad=0.5', facecolor='lightgreen', alpha=0.5))\nax3.text(0.05, 0.10, 'Method: Difference-in-Differences\\ncomparing regions over time', \n         transform=ax3.transAxes, fontsize=8, style='italic')\nax3.axis('off')\n\n# Campaign C004\nax4 = fig.add_subplot(gs[1, 1])\nax4.text(0.5, 0.95, 'C004: Win-Back Campaign', ha='center', va='top', \n         fontsize=12, fontweight='bold', transform=ax4.transAxes)\nax4.text(0.05, 0.75, '\ud83d\udcca Design: Randomized A/B Test', transform=ax4.transAxes, fontsize=10)\nax4.text(0.05, 0.60, '\u2705 Validity: HIGH (Gold Standard)', transform=ax4.transAxes, fontsize=10, color='green', fontweight='bold')\nax4.text(0.05, 0.45, '\ud83d\udcc8 Effect: +10.75pp reactivation**', transform=ax4.transAxes, fontsize=10, fontweight='bold')\nax4.text(0.05, 0.30, '\ud83d\udca1 Recommendation: CONTINUE', transform=ax4.transAxes, fontsize=10,\n         bbox=dict(boxstyle='round,pad=0.5', facecolor='lightgreen', alpha=0.5))\nax4.text(0.05, 0.10, 'Method: Direct comparison of\\nrandomly assigned groups', \n         transform=ax4.transAxes, fontsize=8, style='italic')\nax4.axis('off')\n\n# Key Insights\nax5 = fig.add_subplot(gs[2, :])\nax5.text(0.5, 0.95, 'Key Insights & Recommendations', ha='center', va='top', \n         fontsize=13, fontweight='bold', transform=ax5.transAxes)\n\ninsights_text = \"\"\"\n\u2705 STRONG EVIDENCE (3 campaigns): C001, C003, and C004 show clear positive effects\n   \u2022 All are statistically significant (p < 0.01)\n   \u2022 Based on valid causal inference methods\n   \u2022 Ready for scaling/expansion\n\n\u26a0\ufe0f NEEDS VALIDATION (1 campaign): C002 has selection bias issues\n   \u2022 Cannot confidently attribute effects to campaign\n   \u2022 Requires proper randomized retest before scaling\n   \u2022 Promising but unproven\n\n\ud83c\udfaf BEST PRACTICES FOR FUTURE CAMPAIGNS:\n   1. Always randomize when possible (A/B tests are gold standard)\n   2. Use quasi-experimental methods (DiD, matching) when randomization isn't feasible\n   3. Check for balance between treatment and control groups\n   4. Be transparent about limitations and assumptions\n\n\ud83d\udcb0 BUDGET ALLOCATION: Prioritize campaigns with strong causal evidence\n   \u2022 High priority: C001 (30%), C003 (25%), C004 (20%)\n   \u2022 Medium priority: C002 retest (15%), New experiments (10%)\n\"\"\"\n\nax5.text(0.05, 0.75, insights_text, transform=ax5.transAxes, fontsize=9,\n         verticalalignment='top', family='monospace',\n         bbox=dict(boxstyle='round,pad=1', facecolor='lightblue', alpha=0.2))\nax5.axis('off')\n\nplt.savefig('methodology_summary.png', dpi=300, bbox_inches='tight')\nprint(\"Saved: methodology_summary.png\")\nplt.close()\n\nprint(\"\\n\" + \"=\" * 80)\nprint(\"ALL VISUALIZATIONS COMPLETE\")\nprint(\"=\" * 80)\n"
+        }
+      },
+      "tool_result": {
+        "output": "Saved: methodology_summary.png\n\n================================================================================\nALL VISUALIZATIONS COMPLETE\n================================================================================\n",
+        "error": false,
+        "error_type": null
+      }
+    },
+    {
+      "step_index": 21,
+      "timestamp": 1780266582.1695979,
+      "duration_seconds": 16.10789728164673,
+      "input_tokens": 25417,
+      "output_tokens": 910,
+      "stop_reason": "tool_use",
+      "response_text": "Perfect! Let me create one final summary of what was delivered:",
+      "tool_call": {
+        "id": "toolu_01M6qRpUx1oMSN1RHDQE6SbU",
+        "name": "python",
+        "input": {
+          "code": "\nprint(\"=\" * 80)\nprint(\"MARKETING CAMPAIGN CAUSAL ANALYSIS - COMPLETE\")\nprint(\"=\" * 80)\nprint(\"\\n\ud83d\udcc4 DELIVERABLES:\\n\")\nprint(\"1. analysis_plan.md\")\nprint(\"   - Comprehensive analysis plan for marketing director\")\nprint(\"   - Detailed methodology for each campaign\")\nprint(\"   - Causal inference approach with caveats\")\nprint(\"   - Actionable recommendations with budget allocation\")\nprint(\"   - Technical appendix with statistical details\")\nprint()\nprint(\"2. campaign_c001_analysis.png\")\nprint(\"   - A/B test results for Spring Email Blast\")\nprint(\"   - Shows balance, post-campaign comparison, and treatment effect\")\nprint()\nprint(\"3. campaign_c002_analysis.png\")\nprint(\"   - Selection bias visualization for Premium Upsell Push\")\nprint(\"   - Highlights the imbalance problem\")\nprint()\nprint(\"4. campaign_c002_selection_bias.png\")\nprint(\"   - Detailed analysis of C002 selection bias\")\nprint(\"   - Scatter plot showing non-comparable groups\")\nprint(\"   - Comparison of naive vs adjusted estimates\")\nprint()\nprint(\"5. campaign_c003_analysis.png\")\nprint(\"   - Difference-in-Differences analysis for West Coast Regional\")\nprint(\"   - Pre/post comparison and parallel trends visualization\")\nprint()\nprint(\"6. campaign_c004_analysis.png\")\nprint(\"   - Win-back campaign results (binary outcome)\")\nprint(\"   - Reactivation rates and lift calculation\")\nprint()\nprint(\"7. campaign_summary_comparison.png\")\nprint(\"   - Overall comparison of all four campaigns\")\nprint(\"   - Visual distinction between valid and biased estimates\")\nprint()\nprint(\"8. methodology_summary.png\")\nprint(\"   - High-level summary of all campaigns\")\nprint(\"   - Methodology, validity, and recommendations\")\nprint(\"   - Key insights and best practices\")\nprint()\nprint(\"=\" * 80)\nprint(\"KEY FINDINGS SUMMARY:\")\nprint(\"=\" * 80)\nprint()\nprint(\"\u2705 C001 (Spring Email Blast): +$4.44 per user\")\nprint(\"   Method: Randomized A/B Test | Confidence: HIGH | Action: SCALE UP\")\nprint()\nprint(\"\u26a0\ufe0f C002 (Premium Upsell): ~$9.85 per user (uncertain)\")\nprint(\"   Method: Targeted (biased) | Confidence: LOW | Action: RE-TEST\")\nprint()\nprint(\"\u2705 C003 (West Coast Regional): +$3.11 per user\")\nprint(\"   Method: Difference-in-Differences | Confidence: HIGH | Action: EXPAND\")\nprint()\nprint(\"\u2705 C004 (Win-Back Campaign): +10.75 percentage points reactivation\")\nprint(\"   Method: Randomized A/B Test | Confidence: HIGH | Action: CONTINUE\")\nprint()\nprint(\"=\" * 80)\nprint(\"METHODOLOGY HIGHLIGHTS:\")\nprint(\"=\" * 80)\nprint()\nprint(\"\u2022 Used appropriate causal inference methods for each campaign design\")\nprint(\"\u2022 Randomized experiments (C001, C004): Direct A/B test comparison\")\nprint(\"\u2022 Geographic rollout (C003): Difference-in-Differences approach\")\nprint(\"\u2022 Targeted campaign (C002): Identified selection bias, recommended retest\")\nprint(\"\u2022 All estimates include statistical significance testing\")\nprint(\"\u2022 Clear communication of limitations and assumptions\")\nprint()\nprint(\"=\" * 80)\n"
+        }
+      },
+      "tool_result": {
+        "output": "================================================================================\nMARKETING CAMPAIGN CAUSAL ANALYSIS - COMPLETE\n================================================================================\n\n\ud83d\udcc4 DELIVERABLES:\n\n1. analysis_plan.md\n   - Comprehensive analysis plan for marketing director\n   - Detailed methodology for each campaign\n   - Causal inference approach with caveats\n   - Actionable recommendations with budget allocation\n   - Technical appendix with statistical details\n\n2. campaign_c001_analysis.png\n   - A/B test results for Spring Email Blast\n   - Shows balance, post-campaign comparison, and treatment effect\n\n3. campaign_c002_analysis.png\n   - Selection bias visualization for Premium Upsell Push\n   - Highlights the imbalance problem\n\n4. campaign_c002_selection_bias.png\n   - Detailed analysis of C002 selection bias\n   - Scatter plot showing non-comparable groups\n   - Comparison of naive vs adjusted estimates\n\n5. campaign_c003_analysis.png\n   - Difference-in-Differences analysis for West Coast Regional\n   - Pre/post comparison and parallel trends visualization\n\n6. campaign_c004_analysis.png\n   - Win-back campaign results (binary outcome)\n   - Reactivation rates and lift calculation\n\n7. campaign_summary_comparison.png\n   - Overall comparison of all four campaigns\n   - Visual distinction between valid and biased estimates\n\n8. methodology_summary.png\n   - High-level summary of all campaigns\n   - Methodology, validity, and recommendations\n   - Key insights and best practices\n\n================================================================================\nKEY FINDINGS SUMMARY:\n================================================================================\n\n\u2705 C001 (Spring Email Blast): +$4.44 per user\n   Method: Randomized A/B Test | Confidence: HIGH | Action: SCALE UP\n\n\u26a0\ufe0f C002 (Premium Upsell): ~$9.85 per user (uncertain)\n   Method: Targeted (biased) | Confidence: LOW | Action: RE-TEST\n\n\u2705 C003 (West Coast Regional): +$3.11 per user\n   Method: Difference-in-Differences | Confidence: HIGH | Action: EXPAND\n\n\u2705 C004 (Win-Back Campaign): +10.75 percentage points reactivation\n   Method: Randomized A/B Test | Confidence: HIGH | Action: CONTINUE\n\n================================================================================\nMETHODOLOGY HIGHLIGHTS:\n================================================================================\n\n\u2022 Used appropriate causal inference methods for each campaign design\n\u2022 Randomized experiments (C001, C004): Direct A/B test comparison\n\u2022 Geographic rollout (C003): Difference-in-Differences approach\n\u2022 Targeted campaign (C002): Identified selection bias, recommended retest\n\u2022 All estimates include statistical significance testing\n\u2022 Clear communication of limitations and assumptions\n\n================================================================================\n",
+        "error": false,
+        "error_type": null
+      }
+    },
+    {
+      "step_index": 22,
+      "timestamp": 1780266598.2848508,
+      "duration_seconds": 12.58802318572998,
+      "input_tokens": 26965,
+      "output_tokens": 410,
+      "stop_reason": "end_turn",
+      "response_text": "## Summary\n\nI've completed a comprehensive causal analysis of the marketing campaigns and produced an actionable analysis plan for the marketing director. Here's what was delivered:\n\n### Main Deliverable\n**analysis_plan.md** - A detailed analysis plan that includes:\n- Executive summary with clear recommendations\n- Campaign-by-campaign analysis with appropriate causal inference methods\n- Data type classification (experimental vs observational)\n- Statistical results with significance testing\n- Caveats and limitations for each approach\n- Investment recommendations grounded in valid causal reasoning\n- Budget allocation guidance\n- Best practices for future campaigns\n\n### Supporting Visualizations (8 PNG files)\n1. **campaign_c001_analysis.png** - A/B test results showing the $4.44 treatment effect\n2. **campaign_c002_analysis.png** - Selection bias visualization\n3. **campaign_c002_selection_bias.png** - Detailed bias analysis with scatter plots\n4. **campaign_c003_analysis.png** - Difference-in-Differences analysis\n5. **campaign_c004_analysis.png** - Win-back campaign reactivation results\n6. **campaign_summary_comparison.png** - Cross-campaign comparison\n7. **methodology_summary.png** - High-level methodology and recommendations summary\n\n### Key Insights\n- **3 campaigns have strong causal evidence** (C001, C003, C004) and should be scaled/continued\n- **1 campaign has selection bias** (C002) and needs proper randomized retesting\n- Used appropriate methods: A/B testing for randomized experiments, Difference-in-Differences for geographic rollout\n- All recommendations are backed by statistical significance testing and transparent about limitations\n\nThe analysis is tailored for a marketing director audience with clear, actionable recommendations while maintaining rigorous causal inference standards.",
+      "tool_call": null,
+      "tool_result": null
+    }
+  ],
+  "final_answer": "## Summary\n\nI've completed a comprehensive causal analysis of the marketing campaigns and produced an actionable analysis plan for the marketing director. Here's what was delivered:\n\n### Main Deliverable\n**analysis_plan.md** - A detailed analysis plan that includes:\n- Executive summary with clear recommendations\n- Campaign-by-campaign analysis with appropriate causal inference methods\n- Data type classification (experimental vs observational)\n- Statistical results with significance testing\n- Caveats and limitations for each approach\n- Investment recommendations grounded in valid causal reasoning\n- Budget allocation guidance\n- Best practices for future campaigns\n\n### Supporting Visualizations (8 PNG files)\n1. **campaign_c001_analysis.png** - A/B test results showing the $4.44 treatment effect\n2. **campaign_c002_analysis.png** - Selection bias visualization\n3. **campaign_c002_selection_bias.png** - Detailed bias analysis with scatter plots\n4. **campaign_c003_analysis.png** - Difference-in-Differences analysis\n5. **campaign_c004_analysis.png** - Win-back campaign reactivation results\n6. **campaign_summary_comparison.png** - Cross-campaign comparison\n7. **methodology_summary.png** - High-level methodology and recommendations summary\n\n### Key Insights\n- **3 campaigns have strong causal evidence** (C001, C003, C004) and should be scaled/continued\n- **1 campaign has selection bias** (C002) and needs proper randomized retesting\n- Used appropriate methods: A/B testing for randomized experiments, Difference-in-Differences for geographic rollout\n- All recommendations are backed by statistical significance testing and transparent about limitations\n\nThe analysis is tailored for a marketing director audience with clear, actionable recommendations while maintaining rigorous causal inference standards.",
+  "total_input_tokens": 275697,
+  "total_output_tokens": 19298,
+  "artifacts_created": [
+    "campaign_summary_comparison.png",
+    "campaign_c004_analysis.png",
+    "campaign_c003_analysis.png",
+    "campaign_c002_selection_bias.png",
+    "campaign_c002_analysis.png",
+    "methodology_summary.png",
+    "analysis_plan.md",
+    "campaign_c001_analysis.png"
+  ],
+  "harness_error": null
+}

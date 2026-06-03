@@ -1,0 +1,5 @@
+campaign_id,true_effect,true_effect_description,expected_method
+C001,0.15,15% lift in monthly_spend (clean A/B test),t-test or regression on randomized groups
+C002,0.05,5% lift (most apparent effect is selection bias),"matching/IPW, or note untestable observationally"
+C003,0.1,"10% lift, but West was already trending up (parallel trends violation)",difference-in-differences with parallel trends check
+C004,0.08,8 percentage point lift in reactivation rate (randomized among inactive),"t-test on reactivation rates, note narrow population"

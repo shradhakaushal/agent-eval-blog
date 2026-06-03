@@ -1,0 +1,5 @@
+campaign_id,name,channel,start_date,end_date,assignment_type,target_segment,intended_outcome,notes
+C001,Spring Email Blast,email,2024-04-01,2024-04-30,randomized,all_active_users,monthly_spend,Randomly assigned to 50% of eligible users
+C002,Premium Upsell Push,in_app,2024-06-01,2024-06-30,targeted,high_spend_users,monthly_spend,Targeted at users with monthly_spend > $80 in prior period
+C003,West Coast Regional Push,mixed,2024-07-01,2024-08-31,geo_rollout,west_region,monthly_spend,Rolled out to West region only starting July 1
+C004,Win-Back Campaign,email,2024-09-01,2024-09-30,randomized,inactive_users,reactivation,Randomly assigned to 50% of users inactive for 60+ days
