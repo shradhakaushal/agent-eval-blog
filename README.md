@@ -159,4 +159,4 @@ MIT.
 
 ## Contact
 
-Shradha Kaushal — [your-email / LinkedIn / wherever you want]
+Shradha Kaushal — [https://www.linkedin.com/in/shradha-kaushal/]
