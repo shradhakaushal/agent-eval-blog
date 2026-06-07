@@ -2,7 +2,7 @@
 
 This repo contains the code, data, and trajectory logs for a blog post on multi-axis evaluation of agentic workflows. It's a worked example showing that single-bit success/fail scoring hides most of what makes agent behavior interesting — and what makes it improvable.
 
-**Blog post**: [link to your Substack/Medium post when published]
+**Blog post**: [[link to your Substack/Medium post when published](https://shrak.dev/blog/agent-evals)]
 
 ## What's in here
 
